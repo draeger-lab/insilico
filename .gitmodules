@@ -1,6 +1,0 @@
-[submodule "docs"]
-	path = docs
-	url = https://github.com/draeger-lab/insilico-lab-docs.git
-[submodule "pages"]
-	path = pages
-	url = https://github.com/draeger-lab/insilico-lab-pages.git
