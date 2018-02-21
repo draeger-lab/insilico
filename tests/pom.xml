@@ -15,6 +15,6 @@
 
 
   <modules>
-
+	<module>com.insilicolab.launcher.test</module>
   </modules>
 </project>
