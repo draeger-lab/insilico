@@ -21,6 +21,8 @@ Require-Bundle: org.eclipse.fx.ui.workbench.fx,
  org.eclipse.core.databinding.property,
  org.eclipse.e4.ui.workbench,
  org.eclipse.e4.ui.services,
- org.eclipse.fx.ui.services
+ org.eclipse.fx.ui.services,
+ org.eclipse.core.runtime;bundle-version="3.12.0",
+ org.jetbrains.kotlin.osgi-bundle;bundle-version="1.2.21"
 Import-Package: javax.inject;version="1.0.0"
 Service-Component: OSGI-INF/services/theme-default.xml

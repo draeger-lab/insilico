@@ -2,8 +2,8 @@
 <?eclipse version="3.0"?>
 <plugin>
 <extension id="product" point="org.eclipse.core.runtime.products">
-	<product name="Insilico Lab" application="org.eclipse.fx.ui.workbench.fx.main-thread-application" >
-		<property name="appName" value="Insilico Lab" />
+	<product name="InSilico Lab" application="org.eclipse.fx.ui.workbench.fx.main-thread-application" >
+		<property name="appName" value="InSilico Lab" />
 		
 		<property name="applicationXMI" value="com.insilicolab.launcher/Application.e4xmi" />
 		

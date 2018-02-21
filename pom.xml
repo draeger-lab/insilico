@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  
-  <parent>
-  	<groupId>com.insilicolab</groupId>
-  	<artifactId>com.insilicolab.releng</artifactId>
-  	<version>1.0.0</version>
-	  <relativePath>releng/com.insilicolab.releng</relativePath>
-  </parent>
-  <modelVersion>4.0.0</modelVersion>
-  <artifactId>com.insilicolab.parent</artifactId>
-  <packaging>pom</packaging>
-  <name>InSilico Lab</name>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>com.insilicolab</groupId>
+		<artifactId>com.insilicolab.releng</artifactId>
+		<version>1.0.0</version>
+		<relativePath>releng/com.insilicolab.releng</relativePath>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>com.insilicolab.parent</artifactId>
+	<packaging>pom</packaging>
+	<name>InSilico Lab</name>
 
 
-  <modules>
-    <module>bundles/</module>
-    <module>features/</module>
-    <module>tests/</module>
-    <module>releng/com.insilicolab.product</module>
-    <module>releng/com.insilicolab.target</module>
-  </modules>
+	<modules>
+		<module>bundles/</module>
+		<module>features/</module>
+		<module>tests/</module>
+		<module>releng/com.insilicolab.product</module>
+		<module>releng/com.insilicolab.target</module>
+	</modules>
+	
+	<dependencies>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-osgi-bundle</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+    </dependencies>
 </project>

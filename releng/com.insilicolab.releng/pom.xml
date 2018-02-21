@@ -26,7 +26,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<kotlin.version>1.8</kotlin.version>
+		<kotlin.version>1.2.21</kotlin.version>
 		<product.id>insilico-lab</product.id>
 		<product.version>0.1.0</product.version>
 		<timestamp>${maven.build.timestamp}</timestamp>
@@ -39,7 +39,26 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/efxclipse/runtime-latest/site</url>
 		</repository>
+		<repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-kotlin-kotlin-dev</id>
+            <name>bintray</name>
+            <url>http://dl.bintray.com/kotlin/kotlin-dev</url>
+        </repository>
 	</repositories>
+	
+		<pluginRepositories>
+	   <pluginRepository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-kotlin-kotlin-dev</id>
+            <name>bintray-plugins</name>
+            <url>http://dl.bintray.com/kotlin/kotlin-dev</url>
+       </pluginRepository>
+	</pluginRepositories>
 
 	<build>
 		<defaultGoal>clean package</defaultGoal>
@@ -83,6 +102,7 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho.version}</version>
 				<configuration>
+					<pomDependencies>consider</pomDependencies>
 					<target>
 						<artifact>
 							<groupId>com.insilicolab</groupId>
