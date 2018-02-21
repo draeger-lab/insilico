@@ -1,0 +1,41 @@
+sudo: false
+language: java
+jdk:
+- oraclejdk8
+cache:
+  directories:
+  - $HOME/.m2
+branches:
+  only:
+  - dev
+  - master
+before_install:
+- git clone https://github.com/draeger-lab/insilico-lab.git ~/build/insilico-lab
+- cd build/insilico-lab
+install: true
+script:
+- mvn -DskipTests=true -Dbuild=unstable
+before_deploy:
+- git config --local user.name "Roman Schulte"
+- git config --local user.email "roman-schulte@gmx.de"
+- git tag "Unstable-$(date +'%d.%m.%Y')"
+deploy:
+  - provider: releases
+    prerelease: true
+    api_key:
+      secure: 
+    file:
+    skip_cleanup: true
+    on:
+      repo: draeger-lab/insilico-lab
+      branch: dev
+  - provider: releases
+    prerelease: false
+    api_key:
+      secure:
+    file:
+    skip_cleanup: true
+    on:
+      repo: draeger-lab/insilico-lab
+      branch: master
+      tags: true
