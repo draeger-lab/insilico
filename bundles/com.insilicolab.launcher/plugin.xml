@@ -12,16 +12,4 @@
 	</product>
 	
 </extension>
-<extension
-      id="insilico"
-      point="org.eclipse.core.runtime.products">
-   <product
-         application="org.eclipse.fx.ui.workbench.fx.main-thread-application"
-         name="Insilico Lab">
-      <property
-            name="appName"
-            value="Insilico Lab">
-      </property>
-   </product>
-</extension>
 </plugin>

@@ -8,6 +8,7 @@
 
    <launcherArgs>
       <programArgs>-nosplash
+-clean
       </programArgs>
       <vmArgs>-Dorg.osgi.framework.bundle.parent=ext
       </vmArgs>
