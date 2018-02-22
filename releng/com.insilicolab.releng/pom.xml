@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.insilicolab</groupId>
 	<artifactId>com.insilicolab.releng</artifactId>
@@ -40,24 +40,24 @@
 			<url>http://download.eclipse.org/efxclipse/runtime-latest/site</url>
 		</repository>
 		<repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-kotlin-kotlin-dev</id>
-            <name>bintray</name>
-            <url>http://dl.bintray.com/kotlin/kotlin-dev</url>
-        </repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>bintray-kotlin-kotlin-dev</id>
+			<name>bintray</name>
+			<url>http://dl.bintray.com/kotlin/kotlin-dev</url>
+		</repository>
 	</repositories>
-	
-		<pluginRepositories>
-	   <pluginRepository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-kotlin-kotlin-dev</id>
-            <name>bintray-plugins</name>
-            <url>http://dl.bintray.com/kotlin/kotlin-dev</url>
-       </pluginRepository>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>bintray-kotlin-kotlin-dev</id>
+			<name>bintray-plugins</name>
+			<url>http://dl.bintray.com/kotlin/kotlin-dev</url>
+		</pluginRepository>
 	</pluginRepositories>
 
 	<build>

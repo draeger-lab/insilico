@@ -21,12 +21,16 @@
 		<module>releng/com.insilicolab.product</module>
 		<module>releng/com.insilicolab.target</module>
 	</modules>
-	
+
 	<dependencies>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-osgi-bundle</artifactId>
-            <version>${kotlin.version}</version>
-        </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-osgi-bundle</artifactId>
+			<version>${kotlin.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<defaultGoal>clean verify</defaultGoal>
+	</build>
 </project>
