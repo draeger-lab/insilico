@@ -9,7 +9,7 @@
 		<relativePath>../</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>com.insilicolab.kotlin</artifactId>
+	<artifactId>com.insilicolab.sbml</artifactId>
 	<packaging>eclipse-feature</packaging>
-	<name>InSilico Lab Kotlin Feature</name>
+	<name>InSilico Lab SBML Feature</name>
 </project>

@@ -16,5 +16,7 @@
 
 	<modules>
 		<module>com.insilicolab.launcher</module>
+		<module>com.insilicolab.jsbml.core</module>
+		<module>com.insilicolab.launcher.model</module>
 	</modules>
 </project>

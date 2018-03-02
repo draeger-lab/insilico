@@ -31,6 +31,7 @@
       <feature id="org.eclipse.fx.runtime.e4fx.feature"/>
       <feature id="com.insilicolab.kotlin" version="1.0.0.qualifier"/>
       <feature id="com.insilicolab.core" version="1.0.0.qualifier"/>
+      <feature id="com.insilicolab.sbml" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>

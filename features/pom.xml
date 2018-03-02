@@ -17,5 +17,6 @@
 	<modules>
 		<module>com.insilicolab.core</module>
 		<module>com.insilicolab.kotlin</module>
+		<module>com.insilicolab.sbml</module>
 	</modules>
 </project>
