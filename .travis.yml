@@ -14,7 +14,7 @@ script:
 - mvn package -Dbuild=unstable
 before_deploy:
 - git config --local user.name "Roman Schulte"
-- git config --local user.email "roman-schulte@gmx.de"
+- git config --local user.email "roman.schulte@student.uni-tuebingen.de"
 - rm -rf releng/com.insilicolab.product/target/products/insilico-lab
 deploy:
   - provider: releases
