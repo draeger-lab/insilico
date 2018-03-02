@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.insilicolab.core"
-      label="Core"
+      id="com.insilicolab.kotlin"
+      label="Kotlin Feature"
       version="1.0.0.qualifier"
       provider-name="INSILICOLAB">
 
@@ -18,7 +18,7 @@
    </license>
 
    <plugin
-         id="com.insilicolab.launcher"
+         id="org.jetbrains.kotlin.osgi-bundle"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: LauncherModel
+Bundle-SymbolicName: com.insilicolab.launcher.model
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: INSILICOLAB
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.jetbrains.kotlin.osgi-bundle;bundle-version="1.2.21"

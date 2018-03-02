@@ -29,7 +29,8 @@
 
    <features>
       <feature id="org.eclipse.fx.runtime.e4fx.feature"/>
-      <feature id="com.insilicolab.core" version="1.0.0"/>
+      <feature id="com.insilicolab.kotlin" version="1.0.0.qualifier"/>
+      <feature id="com.insilicolab.core" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>
@@ -38,6 +39,7 @@
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.fx.ui.workbench.fx" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
    </configurations>
 

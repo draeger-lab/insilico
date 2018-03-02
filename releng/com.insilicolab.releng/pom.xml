@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.insilicolab</groupId>
 	<artifactId>com.insilicolab.releng</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>InSilico Lab</name>
 	<url>https://github.com/draeger-lab/insilico-lab/</url>
