@@ -1,2 +1,2 @@
-# insilico-lab
-Insilico Lab
+# InSilico
+This is InSilico.
