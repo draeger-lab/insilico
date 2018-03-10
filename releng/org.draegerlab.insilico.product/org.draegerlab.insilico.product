@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="InSilico Lab" uid="insilico-lab" id="com.insilicolab.launcher.product" application="org.eclipse.fx.ui.workbench.fx.main-thread-application" version="1.0.0" useFeatures="true" includeLaunchers="true">
+<product name="InSilico" uid="insilico" id="org.draegerlab.insilico.launcher.ui.product" application="org.eclipse.fx.ui.workbench.fx.main-thread-application" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
 
    <launcherArgs>
       <programArgs>-nosplash
+-clearPersistedState
       </programArgs>
       <vmArgs>-Dorg.osgi.framework.bundle.parent=ext
       </vmArgs>
