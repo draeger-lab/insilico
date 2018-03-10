@@ -17,3 +17,6 @@ Select your architecture and start with
 ```
 ./eclipse
 ```
+
+## Documentation
+The full documentation can be found [here](http://insilico-docs.readthedocs.io/en/latest/).
