@@ -4,7 +4,6 @@ Bundle-Name: InSilico - Launcher UI
 Bundle-SymbolicName: org.draegerlab.insilico.launcher.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.fx.ui.workbench.fx,
  org.eclipse.e4.ui.model.workbench,
  org.eclipse.e4.core.services,
@@ -25,5 +24,5 @@ Require-Bundle: org.eclipse.fx.ui.workbench.fx,
  org.eclipse.core.runtime;bundle-version="3.12.0",
  org.jetbrains.kotlin.osgi-bundle;bundle-version="1.2.21"
 Import-Package: javax.inject;version="1.0.0"
-Service-Component: OSGI-INF/services/theme-default.xml
 Bundle-Vendor: Draeger Lab
+Export-Package: org.draegerlab.insilico.launcher.ui

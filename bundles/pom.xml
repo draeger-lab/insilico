@@ -18,5 +18,8 @@
 		<module>org.draegerlab.insilico.jsbml.core</module>
 		<module>org.draegerlab.insilico.launcher.ui</module>
 		<module>org.draegerlab.insilico.launcher.model</module>
+		<module>org.draegerlab.insilico.launcher.controller</module>
+		<module>org.draegerlab.insilico.ui.themes.light</module>
+		<module>org.draegerlab.insilico.workbench</module>
 	</modules>
 </project>

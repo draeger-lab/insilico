@@ -1,0 +1,114 @@
+.root {
+	-text-light-primary:   rgba(0, 0, 0, 0.87);
+	-text-light-secondary: rgba(0, 0, 0, 0.54);
+	-text-light-disabled:  rgba(0, 0, 0, 0.38);
+	
+	-text-dark-primary:   rgba(255, 255, 255, 1);
+	-text-dark-secondary: rgba(255, 255, 255, 0.7);
+	-text-dark-disabled:  rgba(255, 255, 255, 0.5);
+	
+	-text-primary:   -text-light-primary;
+	-text-secondary: -text-light-secondary;
+	-text-disabled:  -text-light-disabled;
+	
+	-background-lighter: #FFFFFF;
+	-background-default: #FAFAFA;
+	-background-darker:  #F5F5F5;
+	-background-darkest: #E0E0E0;
+	
+	-border-color: rgba(0, 0, 0, 0.12);
+	
+	-icon-focused:  87%;
+	-icon-active:   54%;
+	-icon-inactive: 38%;
+	
+	-accent-color: #00B0FF;
+
+    -fx-background-color: -background-default;
+    -fx-text-fill: -text-secondary;
+    -fx-font-size:  13px;
+}
+
+
+
+.label {
+	-fx-text-fill: -text-secondary;
+}
+
+.textPrimary {
+	-fx-text-fill: -text-primary;
+}
+
+.textSecondary {
+	-fx-text-fill: -text-secondary;
+}
+
+.textDisabled {
+	-fx-text-fill: -text-disabled;
+}
+
+.button {
+	-fx-text-fill: -text-secondary;
+	-fx-font-weight: bold;
+}
+
+.button.image-view {
+	-fx-opacity: -icon-active;
+}
+
+.button:focused {
+	-fx-background-color: -accent-color;
+	-fx-text-fill: -text-primary;
+}
+
+.button:focused.image-view {
+	-fx-opacity: -icon-focus;
+}
+
+.button:disabled {
+	-fx-text-fill: -text-disabled;
+}
+
+
+.list-view {
+	-fx-padding: 0;
+}
+
+.list-view:focused {
+	-fx-faint-focus-color: transparent;
+	-fx-focus-color: transparent; 
+    -fx-background-insets: -1.4, 0, 1, 2;
+}
+
+.list-cell:even {
+	-fx-background-color: transparent;
+}
+.list-cell:odd {
+	-fx-background-color: transparent;
+}
+
+.list-cell:hover {
+	-fx-background-color: -accent-color;
+	-fx-text-fill: -text-primary;
+}
+
+.single-line-cell {
+	-fx-padding: 0 16 0 16;
+	-fx-cell-size: 48;
+	-fx-label-padding: 0 0 0 32;
+}
+
+.double-line-cell {
+	-fx-padding: 0 16 0 16;
+	-fx-cell-size: 72;
+}
+
+.MTrimBar {
+	-fx-base: -dark-black;
+    -fx-font-size: 12pt;
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-fx-base,-30%), derive(-fx-base,-60%)),
+        linear-gradient(to bottom, -light-black 2%, -dark-black 98%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-effect: dropshadow(two-pass-box,black,5,.2,0,0);
+}
