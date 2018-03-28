@@ -7,11 +7,10 @@
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../</relativePath>
 	</parent>
-
-	<name>InSilico - Launcher Controller</name>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>org.draegerlab.insilico.launcher.controller</artifactId>
+	<artifactId>org.draegerlab.insilico.ui.components</artifactId>
 	<packaging>eclipse-plugin</packaging>
+	<name>InSilico - UI Components</name>
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>

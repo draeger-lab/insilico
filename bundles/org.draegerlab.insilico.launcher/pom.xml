@@ -8,7 +8,7 @@
 		<relativePath>../</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>org.draegerlab.insilico.launcher.model</artifactId>
+	<artifactId>org.draegerlab.insilico.launcher</artifactId>
 	<packaging>eclipse-plugin</packaging>
 
 	<build>
@@ -48,5 +48,5 @@
 		</plugins>
 	</build>
 
-	<name>InSilico - Launcher Model</name>
+	<name>InSilico - Launcher UI</name>
 </project>

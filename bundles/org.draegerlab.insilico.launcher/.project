@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.draegerlab.insilico.launcher.model</name>
+	<name>org.draegerlab.insilico.launcher</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -25,17 +25,22 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.pde.ds.core.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.pde.PluginNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.pde.PluginNature</nature>
 		<nature>org.jetbrains.kotlin.core.kotlinNature</nature>
 	</natures>
 	<linkedResources>
 		<link>
 			<name>kotlin_bin</name>
 			<type>2</type>
-			<locationURI>org.jetbrains.kotlin.core.filesystem:/org.draegerlab.insilico.launcher.model/kotlin_bin</locationURI>
+			<locationURI>org.jetbrains.kotlin.core.filesystem:/org.draegerlab.insilico.launcher.ui/kotlin_bin</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -10,7 +10,7 @@
 		<relativePath>../</relativePath>
 	</parent>
 
-	<artifactId>org.draegerlab.insilico.launcher.model.test</artifactId>
+	<artifactId>org.draegerlab.insilico.launcher.test</artifactId>
 	<packaging>eclipse-test-plugin</packaging>
 
 	<build>
@@ -45,7 +45,7 @@
 							</requirement>
 							<requirement>
 								<type>eclipse-feature</type>
-								<id>org.draegerlab.insilico.launcher</id>
+								<id>org.draegerlab.insilico.core</id>
 								<versionRange>0.0.0</versionRange>
 							</requirement>
 						</extraRequirements>

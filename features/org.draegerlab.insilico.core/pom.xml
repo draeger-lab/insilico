@@ -9,7 +9,7 @@
 		<relativePath>../</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>org.draegerlab.insilico.launcher</artifactId>
+	<artifactId>org.draegerlab.insilico.core</artifactId>
 	<packaging>eclipse-feature</packaging>
-	<name>InSilico - Launcher</name>
+	<name>InSilico - Core</name>
 </project>

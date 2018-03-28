@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="InSilico" uid="insilico" id="org.draegerlab.insilico.launcher.ui.product" application="org.draegerlab.insilico.launcher.controller.App" version="1.0.0" useFeatures="true" includeLaunchers="true">
+<product name="InSilico" uid="insilico" id="org.draegerlab.insilico.launcher.product" application="org.eclipse.fx.ui.workbench.fx.main-thread-application" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -31,9 +31,9 @@
    <features>
       <feature id="org.eclipse.fx.runtime.e4fx.feature"/>
       <feature id="org.draegerlab.insilico.jsbml" version="1.0.0.qualifier"/>
-      <feature id="org.draegerlab.insilico.launcher" version="1.0.0.qualifier"/>
       <feature id="org.draegerlab.insilico.kotlin" version="1.0.0.qualifier"/>
       <feature id="org.draegerlab.insilico.ui.themes" version="1.0.0.qualifier"/>
+      <feature id="org.draegerlab.insilico.core" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>

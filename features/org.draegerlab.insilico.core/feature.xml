@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.draegerlab.insilico.launcher"
+      id="org.draegerlab.insilico.core"
       label="Launcher"
       version="1.0.0.qualifier"
       provider-name="Draeger Lab">
@@ -18,21 +18,21 @@
    </license>
 
    <plugin
-         id="org.draegerlab.insilico.launcher.model"
+         id="org.draegerlab.insilico.launcher"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.draegerlab.insilico.launcher.ui"
+         id="org.draegerlab.insilico.workbench"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.draegerlab.insilico.launcher.controller"
+         id="org.draegerlab.insilico.ui.components"
          download-size="0"
          install-size="0"
          version="0.0.0"
