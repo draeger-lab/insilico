@@ -17,6 +17,7 @@ Go to the folder for your architecture
 * `linux/linux/gtk/x86[_64]/insilico/`
 * `macosx/cocoa/x86_64/insilico.app/Contents/MacOS/`
 * `win32/win32/x86[_64]/insilico/`
+
 and, depending on your operating system, start with
 * `./eclipse` or
 * `eclipse.exe`
