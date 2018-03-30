@@ -9,17 +9,20 @@ cd insilico
 mvn clean verify
 ```
 
-## Start
+## Start from console
 The software is build in the following folders:
 ```
 cd releng/org.draegerlab.insilico.product/target/products/insilico/
 
 ```
 Go to the folder for your architecture
-* `linux/linux/gtk/x86[_64]/insilico/`
+* `linux/gtk/x86[_64]/insilico/`
 * `macosx/cocoa/x86_64/insilico.app/Contents/MacOS/`
 * `win32/win32/x86[_64]/insilico/`
 
 and, depending on your operating system, start with
 * `./eclipse` or
 * `eclipse.exe`
+
+## Start from eclipse
+TODO
