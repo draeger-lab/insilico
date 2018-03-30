@@ -19,6 +19,10 @@ public class ProjectListPart {
 		list.getItems().add("Test");
 		list.getItems().add("Project");
 		
+		for (int i = 0; i < 100; i++) {
+			list.getItems().add("Item " + i);
+		}
+		
 		list.setStyle("-fx-border-width: 0 1 0 0;\n" + 
 				"	-fx-border-color: -border-color;");
 		
@@ -26,9 +30,10 @@ public class ProjectListPart {
 		list.setCellFactory((l) -> {
 			ListCell<String> cell = new ListCell();
 			cell.getStyleClass().add("single-line-cell");
-			cell.setText("Cell");
 			return cell;
 		});
+		
+		
 		parent.setLeft(list);
 	}
 }
