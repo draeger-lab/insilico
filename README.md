@@ -11,9 +11,9 @@ mvn clean verify
 ## Start
 The software is build in the following folders:
 ```
-cd insilico/releng/com.insilicolab.product/target/products/insilico/*
+cd releng/org.draegerlab.product/target/products/insilico/
 ```
-Select your architecture and start with
+Select your architecture `[linux|macosx|win32]` and start with
 ```
 ./eclipse
 ```
