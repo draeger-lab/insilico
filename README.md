@@ -25,4 +25,28 @@ and, depending on your operating system, start with
 * `InSilico.exe`
 
 ## Start from eclipse
-TODO
+Install `Eclipse for RCP and RAP Developers" (plugin developers)`.
+
+The following additional eclipse plugins are required (eclipse marketplace)
+* `Kotlin Plugin for Eclipse`
+
+**Import the project** via  
+The project can be imported from the git repository via
+```
+File -> Import -> Maven -> Existing Maven Projects
+```
+Select the repositoy root path.
+
+**Activate project (dependencies)** via  
+* Select `org.draegerlab.insilico.target.target`
+* `Activate Target Platform` and `Reload Target Platform`
+
+**Build the project** via  
+* Right click on `org.draegerlab.insilico.parent.pom.xml`
+* Run as `Maven build..`
+* Goals `clean verify`
+
+**Run the project** via  
+* Select `org.draegerlab.insilico.product` -> `org.draegerlab.insilico.product`
+* `Launch an Eclipse application`
+* `Run`
