@@ -21,8 +21,8 @@ Go to the folder for your architecture
 * `win32/win32/x86[_64]/insilico/`
 
 and, depending on your operating system, start with
-* `./eclipse` or
-* `eclipse.exe`
+* `./InSilico` or
+* `InSilico.exe`
 
 ## Start from eclipse
 TODO
