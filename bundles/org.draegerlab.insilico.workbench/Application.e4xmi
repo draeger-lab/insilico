@@ -1,10 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_fa6nYRS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.application" bindingContexts="_fa6nYBS-Eeii2_x8mUNL6A">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_O_2fsDKlEei9_dYwcPyNmw" elementId="org.draegerlab.insilico.workbench.trimmedwindow.0">
-    <mainMenu xmi:id="_Pv3AUDKlEei9_dYwcPyNmw" elementId="org.draegerlab.insilico.workbench.mainmenu"/>
-    <trimBars xmi:id="_UQQpYDKlEei9_dYwcPyNmw" elementId="org.draegerlab.insilico.workbench.topbar"/>
-    <trimBars xmi:id="_ENz5YDNpEei9_dYwcPyNmw" elementId="org.draegerlab.insilico.workbench.bottombar" side="Bottom"/>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_fa6nYRS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.application" bindingContexts="_fa6nYBS-Eeii2_x8mUNL6A">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_O_2fsDKlEei9_dYwcPyNmw" elementId="org.draegerlab.insilico.workbench.workbenchwindow" label="Lab">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_OGSWADW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.perspectivestack.0">
+      <children xsi:type="advanced:Perspective" xmi:id="_O8kdwDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.perspective.0">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_PbUPQDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.partsashcontainer.0" horizontal="true">
+          <children xsi:type="basic:Part" xmi:id="_RAyYQDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.part.nav" label="Nav"/>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_UmUUgDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.partsashcontainer.1" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_mUTZMDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.partstack.0">
+              <children xsi:type="basic:Part" xmi:id="_oUP3sDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.part.editor1" label="Editor 1"/>
+              <children xsi:type="basic:Part" xmi:id="_pb5cQDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.part.editor2" label="Editor 2"/>
+            </children>
+            <children xsi:type="basic:Part" xmi:id="_ZBffUDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.part.editorsupport" label="EditorSupport"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_szYK4DW7EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.mainmenu">
+      <children xsi:type="menu:Menu" xmi:id="_Of7IkDW9EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.menu.file" label="File">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_PXtFIDW9EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.directmenuitem.open" label="Open"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_UQQpYDKlEei9_dYwcPyNmw" elementId="org.draegerlab.insilico.workbench.topbar">
+      <children xsi:type="menu:ToolBar" xmi:id="_vzw9QDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.toolbar.0">
+        <children xsi:type="menu:DirectToolItem" xmi:id="_AyDqYDW9EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.directtoolitem.0">
+          <menu xmi:id="_Ec1TADW9EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.menu.0"/>
+        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_FgXMkDW9EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.handledtoolitem.0">
+          <menu xmi:id="_IcUnYDW9EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.menu.1"/>
+        </children>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_ENz5YDNpEei9_dYwcPyNmw" elementId="org.draegerlab.insilico.workbench.bottombar" side="Bottom">
+      <children xsi:type="menu:ToolControl" xmi:id="_zPsRkDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.toolcontrol.0"/>
+    </trimBars>
   </children>
+  <children xsi:type="basic:Window" xmi:id="_2pCocDW7EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.chooselab" label="Choose Lab" tooltip=""/>
+  <children xsi:type="basic:Window" xmi:id="_9P8rADW7EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.createproject" label="Create Project"/>
+  <children xsi:type="basic:Window" xmi:id="_GyQHsDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.window.settings" label="Settings"/>
+  <children xsi:type="basic:Window" xmi:id="_ISXPkDW8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.window.help" label="Help"/>
   <rootContext xmi:id="_fa6nYBS-Eeii2_x8mUNL6A" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
     <children xmi:id="_fa6nYhS-Eeii2_x8mUNL6A" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_fa6nYxS-Eeii2_x8mUNL6A" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
