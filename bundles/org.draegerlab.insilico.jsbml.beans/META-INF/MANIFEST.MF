@@ -5,5 +5,4 @@ Bundle-SymbolicName: org.draegerlab.insilico.jsbml.beans
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: INSILICOLAB
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Require-Bundle: org.jetbrains.kotlin.osgi-bundle;bundle-version="1.2.21",
- org.draegerlab.insilico.jsbml.core;bundle-version="1.0.0"
+Require-Bundle: org.draegerlab.insilico.jsbml.core;bundle-version="1.0.0"

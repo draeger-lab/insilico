@@ -35,7 +35,6 @@
    <features>
       <feature id="org.eclipse.fx.runtime.e4fx.feature"/>
       <feature id="org.draegerlab.insilico.jsbml" version="1.0.0.qualifier"/>
-      <feature id="org.draegerlab.insilico.kotlin" version="1.0.0.qualifier"/>
       <feature id="org.draegerlab.insilico.ui.themes" version="1.0.0.qualifier"/>
       <feature id="org.draegerlab.insilico.core" version="1.0.0.qualifier"/>
    </features>

@@ -22,14 +22,6 @@
 		<module>releng/org.draegerlab.insilico.target</module>
 	</modules>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.jetbrains.kotlin</groupId>
-			<artifactId>kotlin-osgi-bundle</artifactId>
-			<version>${kotlin.version}</version>
-		</dependency>
-	</dependencies>
-
 	<build>
 		<defaultGoal>clean verify</defaultGoal>
 	</build>

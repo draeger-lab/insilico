@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_fa6nYRS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.application" bindingContexts="_fa6nYBS-Eeii2_x8mUNL6A">
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_fa6nYRS-Eeii2_x8mUNL6A" elementId="org.draegerlab.insilico.application" bindingContexts="_fa6nYBS-Eeii2_x8mUNL6A">
   <children xsi:type="basic:Window" xmi:id="_IcHukCYQEeigIr3xw30Jqg" elementId="org.draegerlab.insilico.launcher.ui.window" label="InSilico Launcher" width="600" height="400">
     <tags>efx-center-on-screen</tags>
     <children xsi:type="basic:Part" xmi:id="_lg7mQC6PEei8QOp7vmlYCQ" elementId="org.draegerlab.insilico.launcher.ui.part.projectList" contributionURI="bundleclass://org.draegerlab.insilico.launcher/org.draegerlab.insilico.launcher.ui.ProjectListPart"/>
