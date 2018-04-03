@@ -12,6 +12,7 @@
 -data @user.home/InSilico
       </programArgs>
       <vmArgs>-Dorg.osgi.framework.bundle.parent=ext
+-Dorg.osgi.required.JavaVersion=1.8
       </vmArgs>
    </launcherArgs>
 

@@ -21,39 +21,38 @@ import javafx.stage.Stage;
 
 @SuppressWarnings("restriction")
 public class LogoPart {
-	@Inject
-	Logger logger;
-	
-	@Inject
-	IEclipseContext ctx;
-	
-	@PostConstruct
-	void init(BorderPane parent, Stage primaryStage) {
-		// Setup window
-		primaryStage.setResizable(false);
+    @Inject
+    Logger logger;
 
-		Label label = new Label("InSilico");
-		label.setAlignment(Pos.CENTER);
-		label.setTextAlignment(TextAlignment.CENTER);
-		parent.setCenter(label);
+    @Inject
+    IEclipseContext ctx;
+
+    @PostConstruct
+    void init(BorderPane parent, Stage primaryStage) {
+        // Setup window
+        primaryStage.setResizable(false);
+
+        Label label = new Label("InSilico");
+        label.setAlignment(Pos.CENTER);
+        label.setTextAlignment(TextAlignment.CENTER);
+        parent.setCenter(label);
+
+        Button b = new Button("Create New");
+        b.setOnAction(e -> {
+            logger.info("Button pressed");
+
+            ECommandService cs = ctx.get(ECommandService.class);
+            EHandlerService hs = ctx.get(EHandlerService.class);
+
+            Map<String, Object> args = new HashMap<String, Object>();
 
 
-		
-		Button b = new Button("Create New");
-		b.setOnAction(e -> {
-			logger.info("Button pressed");
-			
-			ECommandService cs = ctx.get(ECommandService.class);
-			EHandlerService hs = ctx.get(EHandlerService.class);
-			
-			Map<String, Object> args = new HashMap<String, Object>();
-			
-			
-			ParameterizedCommand cmd = cs.createCommand("org.draegerlab.insilico.workbench.command.openlab", null);
-			hs.executeHandler(cmd, ctx);
-		});
-		
-		parent.setBottom(b);
+            ParameterizedCommand cmd =
+                    cs.createCommand("org.draegerlab.insilico.workbench.command.openlab", null);
+            hs.executeHandler(cmd, ctx);
+        });
 
-	}
+        parent.setBottom(b);
+
+    }
 }
