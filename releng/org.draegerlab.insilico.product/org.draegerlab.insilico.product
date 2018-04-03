@@ -17,6 +17,7 @@
 
    <windowImages/>
 
+
    <launcher name="InSilico">
       <win useIco="false">
          <bmp/>

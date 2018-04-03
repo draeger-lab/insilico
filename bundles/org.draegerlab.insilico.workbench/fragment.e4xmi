@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_w1COYDX7EeiVUI7ukjRSGA">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_FMfPsDX8EeiVUI7ukjRSGA" featurename="snippets" parentElementId="org.draegerlab.insilico.application">
+    <elements xsi:type="basic:TrimmedWindow" xmi:id="_0GbRMDX8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.window.snippet" label="InSilico Snippet" width="800" height="600">
+      <tags>efx-center-on-screen</tags>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_kME34DX9EeiVUI7ukjRSGA" featurename="commands" parentElementId="org.draegerlab.insilico.application">
+    <elements xsi:type="commands:Command" xmi:id="_lybxsDX9EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.command.openlab" commandName="Open Lab"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_M3ZToDYBEeiVUI7ukjRSGA" featurename="handlers" parentElementId="org.draegerlab.insilico.application">
+    <elements xsi:type="commands:Handler" xmi:id="_P8cZADYBEeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.handler.0" contributionURI="bundleclass://org.draegerlab.insilico.workbench/org.draegerlab.insilico.workbench.handler.OpenWorkbenchHandler" command="_lybxsDX9EeiVUI7ukjRSGA"/>
+  </fragments>
+</fragment:ModelFragments>
