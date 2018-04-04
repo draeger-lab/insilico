@@ -25,12 +25,13 @@ and, depending on your operating system, start with
 * `InSilico.exe`
 
 ## Start from eclipse
-Install `Eclipse for RCP and RAP Developers" (plugin developers)`.
+Install `Eclipse for RCP and RAP Developers (plugin developers)`.
 
 The following additional eclipse plugins are required (eclipse marketplace)
 * `Kotlin Plugin for Eclipse`
+* `Maven Tycho Utilities 1.0.0`
 
-**Import project** via  
+**Import project** via
 The project can be imported from the git repository via
 ```
 File -> Import -> Maven -> Existing Maven Projects
