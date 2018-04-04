@@ -56,4 +56,6 @@ Additional plugins
 * update sites: http://download.eclipse.org/releases/oxygen and install (Eclipse e4 Model Tooling)
 * Eclipse PDE (Plugin Development Environment) 3.10 Luna
 
+`Preferences -> Java -> Compiler -> Errors/Warnings -> Deprecated and restriced API` (change to warnings)
+
 
