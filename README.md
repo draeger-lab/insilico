@@ -50,3 +50,10 @@ Select the repositoy root path.
 * Select `org.draegerlab.insilico.product` -> `org.draegerlab.insilico.product`
 * `Launch an Eclipse application`
 * `Run`
+
+
+Additional plugins
+* update sites: http://download.eclipse.org/releases/oxygen and install (Eclipse e4 Model Tooling)
+* Eclipse PDE (Plugin Development Environment) 3.10 Luna
+
+
