@@ -38,28 +38,8 @@ workspace/
 
 # eclipse files
 .settings/
-.project/
-.classpath/
 .project
 .classpath
-bundles/org.draegerlab.insilico.jsbml.core/.classpath
-bundles/org.draegerlab.insilico.jsbml.core/.project
-bundles/org.draegerlab.insilico.launcher/.classpath
-bundles/org.draegerlab.insilico.launcher/.project
-bundles/org.draegerlab.insilico.launcher/bin/.gitignore
-bundles/org.draegerlab.insilico.ui.components/.classpath
-bundles/org.draegerlab.insilico.ui.components/.project
-bundles/org.draegerlab.insilico.ui.themes.light/.classpath
-bundles/org.draegerlab.insilico.ui.themes.light/.project
-bundles/org.draegerlab.insilico.workbench/.classpath
-bundles/org.draegerlab.insilico.workbench/.project
-features/org.draegerlab.insilico.core/.project
-features/org.draegerlab.insilico.jsbml/.project
-features/org.draegerlab.insilico.kotlin/.project
-features/org.draegerlab.insilico.ui.themes/.project
-releng/org.draegerlab.insilico.product/.project
-releng/org.draegerlab.insilico.target/.project
-tests/org.draegerlab.insilico.launcher.test/.classpath
-tests/org.draegerlab.insilico.launcher.test/.project
-
+.project
+.classpath
 
