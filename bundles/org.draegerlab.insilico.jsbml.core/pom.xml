@@ -10,6 +10,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>org.draegerlab.insilico.jsbml.core</artifactId>
 	<packaging>eclipse-plugin</packaging>
+	<name>InSilico - JSBML</name>
 
 	<dependencies>
 		<dependency>
@@ -18,20 +19,17 @@
 			<version>${jsbml.version}</version>
 			<exclusions>
 				<exclusion>
-          			<groupId>org.jetbrains.kotlin</groupId>
-                    <artifactId>*</artifactId>
-        			</exclusion>
-        			<exclusion>
-        				<groupId>junit</groupId>
-        				<artifactId>*</artifactId>
-        			</exclusion>
+					<groupId>junit</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>
-
+		<outputDirectory>target</outputDirectory>
+		
 		<resources>
 			<resource>
 				<directory>.</directory>
@@ -41,52 +39,53 @@
 			</resource>
 		</resources>
 
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.10</version>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>initialize</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<!-- <outputDirectory>lib/</outputDirectory>  -->
-							<stripVersion>true</stripVersion>
-							<excludeGroupIds>org.sbml.jsbml</excludeGroupIds>
-							<includeScope>runtime</includeScope>
-						</configuration>
-					</execution>
-					<execution>
-						<id>unpack</id>
-						<phase>initialize</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${basedir}</outputDirectory>
-							<excludes>META-INF/*</excludes>
-							<artifact>org.sbml.jsbml:jsbml-core:${jsbml.version}</artifact>
-						</configuration>
-					</execution>
-					<execution>
-						<id>classpath</id>
-						<goals>
-							<goal>build-classpath</goal>
-						</goals>
-						<configuration>
-							<fileSeparator>/</fileSeparator>
-							<prefix>target/dependency</prefix>
-							<outputFile>${project.build.directory}/classPath.txt
-							</outputFile>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
+		
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.10</version>
+					<executions>
+						<execution>
+							<id>copy-dependencies</id>
+							<phase>initialize</phase>
+							<goals>
+								<goal>copy-dependencies</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${project.build.directory}/dependency</outputDirectory>
+								<stripVersion>true</stripVersion>
+								<!-- <excludeGroupIds>org.sbml.jsbml</excludeGroupIds> -->
+								<includeScope>runtime</includeScope>
+							</configuration>
+						</execution>
+						<execution>
+							<id>unpack</id>
+							<phase>initialize</phase>
+							<goals>
+								<goal>unpack</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${basedir}</outputDirectory>
+								<excludes>META-INF/*</excludes>
+								<artifact>org.sbml.jsbml:jsbml-core:${jsbml.version}</artifact>
+							</configuration>
+						</execution>
+						<execution>
+							<id>classpath</id>
+							<phase>initialize</phase>
+							<goals>
+								<goal>build-classpath</goal>
+							</goals>
+							<configuration>
+								<fileSeparator>/</fileSeparator>
+								<prefix>target/dependency</prefix>
+								<outputFile>${project.build.directory}/classPath.txt
+								</outputFile>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
 	</build>
-	<name>InSilico - JSBML</name>
 </project>

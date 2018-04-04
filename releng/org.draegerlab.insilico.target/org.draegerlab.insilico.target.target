@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="insilicolab" sequenceNumber="12">
+<?pde version="3.8"?><target name="insilicolab" sequenceNumber="14">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.fx.target.feature.feature.group" version="3.0.0.201706050601"/>
@@ -16,6 +16,6 @@
 <unit id="org.mockito" version="1.9.5.v201605172210"/>
 <repository location="http://download.eclipse.org/tools/orbit/R-builds/R20170516192513/repository/"/>
 </location>
-<location path="${project_loc:org.draegerlab.insilico.target}/lib" type="Directory"/>
+<location path="${project_loc:org.draegerlab.insilico.maven.dependencies}/target/repository" type="Profile"/>
 </locations>
 </target>

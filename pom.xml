@@ -20,6 +20,7 @@
 		<module>tests/</module>
 		<module>releng/org.draegerlab.insilico.product</module>
 		<module>releng/org.draegerlab.insilico.target</module>
+		<module>org.draegerlab.insilico.maven.dependencies</module>
 	</modules>
 
 	<build>

@@ -18,7 +18,7 @@
    </license>
 
    <plugin
-         id="org.draegerlab.insilico.jsbml.core"
+         id="org.sbml.jsbml.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
