@@ -10,14 +10,5 @@ public class LightTheme extends AbstractTheme {
 	
 	public LightTheme() {
 		super(LightTheme.ID, "Light Theme", LightTheme.class.getClassLoader().getResource("css/light.css"));
-		URL css = LightTheme.class.getClassLoader().getResource("css/light.css");
-		File f = new File(css.getPath());
-		if (f.exists()) {
-			return;
-		}
-		else {
-			return;
-		}
-		
 	}
 }

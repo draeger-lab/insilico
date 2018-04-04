@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="InSilico" uid="insilico" id="org.draegerlab.insilico.launcher.product" application="org.eclipse.fx.ui.workbench.fx.main-thread-application" version="1.0.0" useFeatures="true" includeLaunchers="true">
+<product name="InSilico" uid="insilico" id="org.draegerlab.insilico.launcher.launcher" application="org.draegerlab.insilico.launcher.main" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -9,12 +9,15 @@
    <launcherArgs>
       <programArgs>-nosplash
 -clearPersistedState
+-data @user.home/InSilico
       </programArgs>
       <vmArgs>-Dorg.osgi.framework.bundle.parent=ext
+-Dorg.osgi.required.JavaVersion=1.8
       </vmArgs>
    </launcherArgs>
 
    <windowImages/>
+
 
    <launcher name="InSilico">
       <win useIco="false">
@@ -34,7 +37,6 @@
    <features>
       <feature id="org.eclipse.fx.runtime.e4fx.feature"/>
       <feature id="org.draegerlab.insilico.jsbml" version="1.0.0.qualifier"/>
-      <feature id="org.draegerlab.insilico.kotlin" version="1.0.0.qualifier"/>
       <feature id="org.draegerlab.insilico.ui.themes" version="1.0.0.qualifier"/>
       <feature id="org.draegerlab.insilico.core" version="1.0.0.qualifier"/>
    </features>
@@ -47,6 +49,7 @@
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.fx.ui.workbench.fx" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
+      <property name="osgi.instance.area.default" value="@user.home/InSilico" />
    </configurations>
 
    <preferencesInfo>

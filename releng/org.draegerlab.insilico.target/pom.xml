@@ -12,14 +12,6 @@
 	<artifactId>org.draegerlab.insilico.target</artifactId>
 	<packaging>eclipse-target-definition</packaging>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.jetbrains.kotlin</groupId>
-			<artifactId>kotlin-osgi-bundle</artifactId>
-			<version>${kotlin.version}</version>
-		</dependency>
-	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>

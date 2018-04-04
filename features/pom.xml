@@ -16,7 +16,6 @@
 
 	<modules>
 		<module>org.draegerlab.insilico.core</module>
-		<module>org.draegerlab.insilico.kotlin</module>
 		<module>org.draegerlab.insilico.jsbml</module>
 		<module>org.draegerlab.insilico.ui.themes</module>
 	</modules>
