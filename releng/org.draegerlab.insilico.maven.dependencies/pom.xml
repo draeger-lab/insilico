@@ -30,9 +30,14 @@
 								<!-- groupId:artifactId:version -->
 								<artifact>
 									<id>org.sbml.jsbml:jsbml-core:${jsbml.version}</id>
-									<!-- <id>org.graphstream:gs-ui-javafx:0.0.1</id> -->
+								</artifact>
+								<artifact>
 									<id>org.graphstream:gs-ui:${graphstream.version}</id>
+								</artifact>
+								<artifact>
 									<id>org.graphstream:gs-core:${graphstream.version}</id>
+								</artifact>
+								<artifact>
 									<id>org.graphstream:gs-algo:${graphstream.version}</id>
 								</artifact>
 							</artifacts>

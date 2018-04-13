@@ -39,12 +39,9 @@
 			<url>http://download.eclipse.org/efxclipse/runtime-latest/site</url>
 		</repository>
 		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>bintray-kotlin-kotlin-dev</id>
-			<name>bintray</name>
-			<url>http://dl.bintray.com/kotlin/kotlin-dev</url>
+			<id>maven-dependencies</id>
+			<layout>p2</layout>
+			<url>file://${project.basedir}/../../releng/org.draegerlab.insilico.maven.dependencies/target/repository</url>
 		</repository>
 	</repositories>
 
