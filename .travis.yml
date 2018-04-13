@@ -11,36 +11,21 @@ branches:
   - master
 install: true
 script:
-- chmod a+x scripts/update_dependencies.sh
-- ./scripts/update_dependencies.sh
-- mvn package -Dbuild=unstable
+  - chmod a+x scripts/update_dependencies.sh
+  - ./scripts/update_dependencies.sh
+  - mvn package -Dbuild=unstable
 before_deploy:
-- git config --local user.name "Roman Schulte"
-- git config --local user.email "roman.schulte@student.uni-tuebingen.de"
-- rm -rf releng/org.draegerlab.insilico.product/target/products/insilico
+  - git config --local user.name "Roman Schulte"
+  - git config --local user.email "roman.schulte@student.uni-tuebingen.de"
+  - rm -rf releng/org.draegerlab.insilico.product/target/products/insilico
 deploy:
-  - provider: releases
-    prerelease: true
-    api_key:
-      secure: rpeF0q0uIPf3Sibf8zHFuh6vT5E1wLMMQwZMmUONOaApOBpzghn5a0ya0cjlva7YYQ0XSOlU04MSGpawefmJVwOBroYioMFxYjYmg8y/iNPCoSMUi2rQa4PGjk/VTrys6fu6qF6fSNbdirfKIbsDpV8puTblWG2jcr5AIvIMF5kjiONMULH0Htjlteh5RgVWHA8SdOoobEDsG3QVeWYfA4F2cYyAXUzYrX5oUwSmM1umAB1TEKDpP/kjafvqmJTUI83ls4LBt3EN4EWakHEjnnLZNUSJ55kwYRed8OAj4HLMQvc/Pv6Eke8YfVobpM1RuJ9UI/6O/UXwGh54zcxSUvZ5moQ6AGW30/AYvkFnizHgRfbmLqurE29hEg+ZDnHix2m7+d70rE5pUULTEQDwiJqTLDcrqAdKmJWGvKxgt5vbGLmwdgUnn7CSYCqC1g2QNvRESsOSzkXx3rdkC5mLP3KvzxxQDJhElEVgobWU/TZrEfjkBxE3oA2481fmmuRURVsHR571ouVAyVMZaUeI3xjSjs4AlM/qxXn7A5m0+KGaNfHW0H/nwdh+U2s+0/aRJGsW/Dv78LyItQ3PZLTwXas+VojiFJXi32z2Tm47xh8uDl4qbJvkMrlpgBVhbKl8t8Fxgu4T0rJGJWXLHMY7OxYRC930b+U7Ett/gHwAs7k=
-    file_glob: true
-    file:
-      - releng/org.draegerlab.insilico.product/target/products/*
-    skip_cleanup: true
-    overwrite: true
-    on:
-      repo: draeger-lab/insilico
-      branch: dev
-  - provider: releases
-    prerelease: false
-    api_key:
-      secure: rpeF0q0uIPf3Sibf8zHFuh6vT5E1wLMMQwZMmUONOaApOBpzghn5a0ya0cjlva7YYQ0XSOlU04MSGpawefmJVwOBroYioMFxYjYmg8y/iNPCoSMUi2rQa4PGjk/VTrys6fu6qF6fSNbdirfKIbsDpV8puTblWG2jcr5AIvIMF5kjiONMULH0Htjlteh5RgVWHA8SdOoobEDsG3QVeWYfA4F2cYyAXUzYrX5oUwSmM1umAB1TEKDpP/kjafvqmJTUI83ls4LBt3EN4EWakHEjnnLZNUSJ55kwYRed8OAj4HLMQvc/Pv6Eke8YfVobpM1RuJ9UI/6O/UXwGh54zcxSUvZ5moQ6AGW30/AYvkFnizHgRfbmLqurE29hEg+ZDnHix2m7+d70rE5pUULTEQDwiJqTLDcrqAdKmJWGvKxgt5vbGLmwdgUnn7CSYCqC1g2QNvRESsOSzkXx3rdkC5mLP3KvzxxQDJhElEVgobWU/TZrEfjkBxE3oA2481fmmuRURVsHR571ouVAyVMZaUeI3xjSjs4AlM/qxXn7A5m0+KGaNfHW0H/nwdh+U2s+0/aRJGsW/Dv78LyItQ3PZLTwXas+VojiFJXi32z2Tm47xh8uDl4qbJvkMrlpgBVhbKl8t8Fxgu4T0rJGJWXLHMY7OxYRC930b+U7Ett/gHwAs7k=
-    file_glob: true
-    file:
-      - releng/org.draegerlab.insilico.product/target/products/*
-    skip_cleanup: true
-    overwrite: true
-    on:
-      repo: draeger-lab/insilico
-      branch: master
-      tags: true
+  provider: releases
+  prerelease: true
+  api_key: secure: rpeF0q0uIPf3Sibf8zHFuh6vT5E1wLMMQwZMmUONOaApOBpzghn5a0ya0cjlva7YYQ0XSOlU04MSGpawefmJVwOBroYioMFxYjYmg8y/iNPCoSMUi2rQa4PGjk/VTrys6fu6qF6fSNbdirfKIbsDpV8puTblWG2jcr5AIvIMF5kjiONMULH0Htjlteh5RgVWHA8SdOoobEDsG3QVeWYfA4F2cYyAXUzYrX5oUwSmM1umAB1TEKDpP/kjafvqmJTUI83ls4LBt3EN4EWakHEjnnLZNUSJ55kwYRed8OAj4HLMQvc/Pv6Eke8YfVobpM1RuJ9UI/6O/UXwGh54zcxSUvZ5moQ6AGW30/AYvkFnizHgRfbmLqurE29hEg+ZDnHix2m7+d70rE5pUULTEQDwiJqTLDcrqAdKmJWGvKxgt5vbGLmwdgUnn7CSYCqC1g2QNvRESsOSzkXx3rdkC5mLP3KvzxxQDJhElEVgobWU/TZrEfjkBxE3oA2481fmmuRURVsHR571ouVAyVMZaUeI3xjSjs4AlM/qxXn7A5m0+KGaNfHW0H/nwdh+U2s+0/aRJGsW/Dv78LyItQ3PZLTwXas+VojiFJXi32z2Tm47xh8uDl4qbJvkMrlpgBVhbKl8t8Fxgu4T0rJGJWXLHMY7OxYRC930b+U7Ett/gHwAs7k=
+  file_glob: true
+  file: releng/org.draegerlab.insilico.product/target/products/*
+  skip_cleanup: true
+  overwrite: true
+  on:
+    repo: draeger-lab/insilico
+    branch: dev
