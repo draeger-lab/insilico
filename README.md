@@ -5,7 +5,13 @@
 ```
 git clone https://github.com/draeger-lab/insilico.git
 git checkout dev
-cd insilico
+
+# Build dependencies
+cd insilico/releng/org.draegerlab.insilico.maven.dependencies
+mvn clean p2:site
+
+# Build product
+cd ../../
 mvn clean verify
 ```
 
