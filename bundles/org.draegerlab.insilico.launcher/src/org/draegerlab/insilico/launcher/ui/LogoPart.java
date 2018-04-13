@@ -11,6 +11,7 @@ import org.eclipse.e4.core.commands.ECommandService;
 import org.eclipse.e4.core.commands.EHandlerService;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.services.log.Logger;
+import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -27,14 +28,23 @@ public class LogoPart {
     @Inject
     IEclipseContext ctx;
 
+    @Inject
+    MPart part;
+
+
     @PostConstruct
     void init(BorderPane parent, Stage primaryStage) {
+        logger.debug("Has menu " + (part.getMenus() != null));
         // Setup window
         primaryStage.setResizable(false);
+
+        parent.setStyle("-fx-border-color: -color-divider;\n" + "-fx-border-width: 0 0 0 1px;\n"
+                + "-fx-border-style: solid;\n");
 
         Label label = new Label("InSilico");
         label.setAlignment(Pos.CENTER);
         label.setTextAlignment(TextAlignment.CENTER);
+        label.getStyleClass().add("font-display-2");
         parent.setCenter(label);
 
         Button b = new Button("Create New");

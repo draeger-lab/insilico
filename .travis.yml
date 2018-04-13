@@ -11,6 +11,8 @@ branches:
   - master
 install: true
 script:
+- chmod a+x scripts/update_dependencies.sh
+- ./scripts/update_dependencies.sh
 - mvn package -Dbuild=unstable
 before_deploy:
 - git config --local user.name "Roman Schulte"

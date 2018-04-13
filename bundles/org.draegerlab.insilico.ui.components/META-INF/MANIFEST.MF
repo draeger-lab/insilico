@@ -4,3 +4,4 @@ Bundle-Name: UI Components
 Bundle-SymbolicName: org.draegerlab.insilico.ui.components
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.draegerlab.insilico.ui.components

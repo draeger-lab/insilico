@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="ASCII"?>
-<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_w1COYDX7EeiVUI7ukjRSGA">
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_w1COYDX7EeiVUI7ukjRSGA">
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_FMfPsDX8EeiVUI7ukjRSGA" featurename="snippets" parentElementId="org.draegerlab.insilico.application">
     <elements xsi:type="basic:TrimmedWindow" xmi:id="_0GbRMDX8EeiVUI7ukjRSGA" elementId="org.draegerlab.insilico.workbench.labwindow" label="InSilico - Lab" width="800" height="600">
       <tags>efx-center-on-screen</tags>
-      <children xsi:type="advanced:Area" xmi:id="_pwNB8Dd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.area.0">
+      <children xsi:type="basic:PartSashContainer" xmi:id="_Xy-8MDjaEei1pY_kO3sSRA" elementId="org.draegerlab.insilico.workbench.partsashcontainer.1">
+        <tags>fx_fixedLayout</tags>
         <children xsi:type="basic:PartSashContainer" xmi:id="_49qDkDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.partsashcontainer.0" horizontal="true">
-          <children xsi:type="basic:Part" xmi:id="_6QAcQDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.part.nav" label="Nav"/>
-          <children xsi:type="basic:PartStack" xmi:id="_7wCroDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.editorstack"/>
+          <persistedState key="fx_layout_grab_vertical" value="true"/>
+          <children xsi:type="basic:Part" xmi:id="_6QAcQDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.part.nav" containerData="2" label="Nav"/>
+          <children xsi:type="basic:PartStack" xmi:id="_7wCroDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.editorstack" containerData="3"/>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_rJw14Dd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.statusbar" contributionURI="bundleclass://org.draegerlab.insilico.workbench/org.draegerlab.insilico.workbench.handler.StatusBarPart" label=""/>
+        <children xsi:type="basic:Part" xmi:id="_rJw14Dd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.statusbar" contributionURI="bundleclass://org.draegerlab.insilico.workbench/org.draegerlab.insilico.workbench.handler.StatusBarPart" label="">
+          <persistedState key="fx_layout_height" value="24"/>
+        </children>
       </children>
-      <trimBars xmi:id="_yJtDgDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.tooltrim"/>
+      <trimBars xmi:id="_yJtDgDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.tooltrim">
+        <children xsi:type="menu:ToolBar" xmi:id="_sekcUDy9Eei1gL7S6O-k7A" elementId="org.draegerlab.insilico.workbench.toolbar.0">
+          <children xsi:type="menu:DirectToolItem" xmi:id="_tXwuIDy9Eei1gL7S6O-k7A" elementId="org.draegerlab.insilico.workbench.directtoolitem.test" label="Test"/>
+          <children xsi:type="menu:DirectToolItem" xmi:id="_ueY_ADy9Eei1gL7S6O-k7A" elementId="org.draegerlab.insilico.workbench.directtoolitem.foo" label="Foo"/>
+        </children>
+      </trimBars>
     </elements>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_kME34DX9EeiVUI7ukjRSGA" featurename="commands" parentElementId="org.draegerlab.insilico.application">

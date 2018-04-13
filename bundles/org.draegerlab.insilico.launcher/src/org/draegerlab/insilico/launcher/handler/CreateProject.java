@@ -1,4 +1,4 @@
-package org.draegerlab.insilico.workbench.handler;
+package org.draegerlab.insilico.launcher.handler;
 
 import java.io.File;
 
@@ -20,7 +20,7 @@ import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
 @SuppressWarnings("restriction")
-public class OpenWorkbenchHandler {
+public class CreateProject {
 
     @Inject
     Logger logger;
@@ -35,7 +35,7 @@ public class OpenWorkbenchHandler {
     MApplication app;
 
     @Execute
-    public void openWorkbench(Stage stage) {
+    public void createProject(Stage stage) {
 
         DirectoryChooser dc = new DirectoryChooser();
         dc.setTitle("Select Lab Location...");

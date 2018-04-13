@@ -9,10 +9,12 @@
 	-text-light-secondary: rgba(255, 255, 255, 0.7);
 	-text-light-disabled:  rgba(255, 255, 255, 0.5);
 	
-	-text-primary:   -text-dark-primary;
-	-text-secondary: -text-dark-secondary;
-	-text-disabled:  -text-dark-disabled;
+	/* Choose text color based on background color */
+	-text-primary:   ladder(-fx-background, -text-light-primary 49%, -text-dark-primary 50%);
+	-text-secondary: ladder(-fx-background, -text-light-secondary 49%, -text-dark-secondary 50%);
+	-text-disabled:  ladder(-fx-background, -text-light-disabled 49%, -text-dark-disabled 50%);
 	
+	-fx-text-background-color: -text-primary;
 	
 	/* Base colors of the theme. Used as background colors. */
 	-color-base-ligther: #FFFFFF;
@@ -24,9 +26,9 @@
 	-color-divider: rgba(0, 0, 0, 0.12);
 	
 	/* Accent color to selections or interactive elements. */
-	-color-accent-lighter: #80CBC4;
-	-color-accent: #4DB6AC;
-	-color-accent-darker: #26A69A;
+	-color-accent-lighter: #26A69A;
+	-color-accent: #009688;
+	-color-accent-darker: #00897B;
 	
 	
 	-icon-focused:  87%;
@@ -77,20 +79,26 @@
 
 	-fx-accent: -color-accent;
 	
-	
+	-fx-font-family: sans-serif;
+	-fx-font-size: 13px;
+	-fx-font-weight: 400;
 }
 
+
+/* === COMMON STYLES ==================================== */
 
 .primary-text {
 	-fx-dark-text-color: -text-dark-primary;
 	-fx-mid-text-color: -text-primary;
 	-fx-light-text-color: -text-light-primary;
+	-fx-text-background-color: -text-primary;
 }
 
 .secondary-text {
 	-fx-dark-text-color: -text-dark-secondary;
 	-fx-mid-text-color: -text-secondary;
 	-fx-light-text-color: -text-light-secondary;
+	-fx-text-background-color: -text-secondary;
 }
 
 .darker {
@@ -106,6 +114,64 @@
 .divider {
 	-fx-background: -color-divider;
 	-fx-background-color: -color-divider;
+}
+
+
+/* === Font Styles ================================ */
+
+.font-display-4 {
+	-fx-font-size: 112px;
+	-fx-font-weight: 300;
+}
+
+.font-display-3 {
+	-fx-font-size: 56px;
+	-fx-font-weight: 400;
+}
+
+.font-display-2 {
+	-fx-font-size: 45px;
+	-fx-font-weight: 400;
+}
+
+.font-display-1 {
+	-fx-font-size: 34px;
+	-fx-font-weight: 400;
+}
+
+.font-headline {
+	-fx-font-size: 24px;
+	-fx-font-weight: 400;
+}
+
+.font-title {
+	-fx-font-size: 20px;
+	-fx-font-weight: 500;
+}
+
+.font-subheading {
+	-fx-font-size: 15px;
+	-fx-font-weight: 400;
+}
+
+.font-body-2 {
+	-fx-font-size: 13px;
+	-fx-font-weight: 500;
+}
+
+.font-body-1 {
+	-fx-font-size: 13px;
+	-fx-font-weight: 400;
+}
+
+.font-caption {
+	-fx-font-size: 12px;
+	-fx-font-weight: 400;
+}
+
+.font-callout {
+	-fx-font-size: 14px;
+	-fx-font-weight: 500;
 }
 
 
@@ -177,7 +243,7 @@
 .tree-table-view,
 .html-editor {
     -fx-background-insets: 0;
-    -fx-padding: 0;
+    -fx-padding: 0px 0 0 0;
 }
 
 .scroll-pane:focused,
@@ -187,17 +253,133 @@
 .table-view:focused,
 .tree-table-view:focused,
 .html-editor:contains-focus {
-    -fx-background-color: -fx-background;
+    -fx-background-color: inherit;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }
 
-/* ones with grey -fx-background not lighter -fx-control-inner-background */
 .scroll-pane,
 .split-pane {
-    -fx-background-color: -fx-background;
+    -fx-background-color: inherit;
 }
 .scroll-pane:focused,
 .split-pane:focused {
-    -fx-background-color: -fx-background;
+    -fx-background-color: inherit;
 }
+
+
+
+/*******************************************************************************
+ *                                                                             *
+ * ListCell                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+/* === Common =============================================================== */
+.cell:empty {
+	-fx-background: transparent;
+	-fx-background-color: transparent;
+	-fx-opacity: 0%;
+}
+
+.cell:hover {
+	-fx-background: -color-accent;
+	-fx-background-color: -color-accent;
+}
+
+.cell:focused {
+	-fx-background: -color-accent;
+	-fx-background-color: -color-accent;
+}
+
+/* === Single Line Cell ===================================================== */
+.single-line-cell {
+	-fx-cell-size: 40px;
+	-fx-font-size: 13px;
+	-fx-alignment: center-left;
+	-fx-text-fill: -text-primary;
+	-fx-label-padding: 0px 16px 0px 16px;
+	-fx-padding: 0px;
+}
+
+
+
+/* === Single Line Cell Without Graphic ===================================== */
+.single-line-cell.no-graphic {
+	-fx-padding: 4px 0px 0px 0px;
+	-fx-graphic-text-gap: 0;
+}
+
+.single-line-cell.no-graphic > .graphic {
+	visibility: hidden;
+}
+
+/* === Single Line Cell With Image =========================================== */
+.single-line-cell.square-graphic {
+	-fx-graphic-text-gap: 16px;
+}
+
+.single-line-cell.square-graphic > .graphic {
+	-fx-min-width: 24px;
+	-fx-min-height: 24px;
+	-fx-pref-width: 24px;
+	-fx-pref-height: 24px;
+	-fx-max-width: 24px;
+	-fx-max-height: 24px;
+		
+	visibility: true;
+}
+
+/* === Single Line Cell With Image ============================================ */
+.single-line-cell.circle-graphic {
+	-fx-graphic-text-gap: 24px;
+	-fx-cell-size: 48px;
+}
+
+.single-line-cell.circle-graphic > .graphic {
+	-fx-min-width: 32px;
+	-fx-min-height: 32px;
+	-fx-pref-width: 32px;
+	-fx-pref-height: 32px;
+	-fx-max-width: 32px;
+	-fx-max-height: 32px;
+	
+	-fx-border-radius: 50%;
+	-fx-background-radius: 50%;
+	
+	visibility: true;
+}
+
+/* === Double Line Cell ====================================================== */
+.double-line-cell {
+	-fx-cell-size: 60px;
+	-fx-alignment: top-left;
+	-fx-padding: 0px;
+	-fx-label-padding: 16px 16px 0px 16px;
+}
+
+.double-line-cell > .subtitle {
+	-fx-text-fill: -text-secondary;
+	-fx-font-size: 11px;
+	-fx-alignment: bottom-left;
+	-fx-padding: 0px 16px 16px 16px;
+	-fx-background-color: red;
+}
+
+.double-line-cell.no-graphic {
+	-fx-label-padding: 1.333em 1.333em 0em 1.333em; /* 16 16 0 16 */
+	-fx-cell-size: 60px;
+	
+}
+
+.double-line-cell.no-graphic > .subtitel{
+	-fx-text-fill: -text-secondary;
+	-fx-font-size: 11px;
+	-fx-alignment: bottom-left;
+	-fx-padding: 0em 1.333em 1em 1.333em; /* 0 16 12 16 */
+}
+
+.double-line-cell.no-graphic > .image-view {
+	
+}
+
