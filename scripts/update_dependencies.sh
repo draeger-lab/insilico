@@ -1,8 +1,11 @@
 #! /bin/bash
+################################
+# Update External Dependencies #
+################################
 
 # Find directory of this script
 cd $(dirname $0)
-cd ../releng/org.draegerlab.insilico.maven.dependencies
+cd ../releng/org.insilico.maven.dependencies
 
 #echo "Update GraphStream Dependencies"
 #cd gs-deps

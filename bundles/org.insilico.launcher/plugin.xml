@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+<extension
+      id="launcher"
+      name="InSilico Launcher"
+      point="org.eclipse.core.runtime.products">
+   <product
+         application="org.insilico.launcher.main"
+         name="InSilico">
+      <property
+            name="appName"
+            value="InSilico">
+      </property>
+      <property
+            name="applicationXMI"
+            value="org.insilico.launcher/Application.e4xmi">
+      </property>
+      <property
+            name="cssTheme"
+            value="org.insilico.ui.themes.light">
+      </property>
+   </product>
+</extension>
+<extension
+      id="main"
+      name="InSilico Launcher"
+      point="org.eclipse.core.runtime.applications">
+   <application
+         cardinality="singleton-global"
+         thread="main"
+         visible="true">
+      <run
+            class="org.insilico.launcher.Main">
+      </run>
+   </application>
+</extension>
+</plugin>

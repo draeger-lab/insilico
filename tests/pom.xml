@@ -3,18 +3,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<parent>
-		<groupId>org.draegerlab.insilico</groupId>
-		<artifactId>org.draegerlab.insilico.parent</artifactId>
+		<groupId>org.insilico</groupId>
+		<artifactId>org.insilico.parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>org.draegerlab.insilico.tests</artifactId>
+	<artifactId>org.insilico.tests</artifactId>
 	<packaging>pom</packaging>
 	<name>InSilico Tests</name>
 
 
 	<modules>
-		<module>org.draegerlab.insilico.launcher.test</module>
+		<module>org.insilico.launcher.test</module>
 	</modules>
 </project>

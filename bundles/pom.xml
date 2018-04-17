@@ -3,22 +3,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<parent>
-		<groupId>org.draegerlab.insilico</groupId>
-		<artifactId>org.draegerlab.insilico.parent</artifactId>
+		<groupId>org.insilico</groupId>
+		<artifactId>org.insilico.parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>org.draegerlab.insilico.bundles</artifactId>
+	<artifactId>org.insilico.bundles</artifactId>
 	<packaging>pom</packaging>
 	<name>InSilico Bundles</name>
 
 
 	<modules>
 		
-		<module>org.draegerlab.insilico.launcher</module>
-		<module>org.draegerlab.insilico.ui.themes.light</module>
-		<module>org.draegerlab.insilico.workbench</module>
-		<module>org.draegerlab.insilico.ui.components</module>
+		<module>org.insilico.launcher</module>
+		<module>org.insilico.ui.themes.light</module>
+		<module>org.insilico.workbench</module>
+		<module>org.insilico.ui.components</module>
 	</modules>
 </project>
