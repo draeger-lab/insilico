@@ -11,5 +11,5 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>org.insilico.jsbml</artifactId>
 	<packaging>eclipse-feature</packaging>
-	<name>InSilico - JSBML Feature</name>
+	<name>JSBML Feature</name>
 </project>

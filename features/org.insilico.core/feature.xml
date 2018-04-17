@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.insilico.core"
-      label="Launcher"
+      label="Core Feature"
       version="1.0.0.qualifier"
       provider-name="Draeger Lab">
 
@@ -18,21 +18,21 @@
    </license>
 
    <plugin
-         id="org.insilico.launcher"
+         id="org.insilico.core.application"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.insilico.workbench"
+         id="org.insilico.core.application.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.insilico.ui.components"
+         id="org.insilico.core.ui"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -8,9 +8,9 @@
 		<relativePath>../</relativePath>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>org.insilico.ui.themes.light</artifactId>
+	<artifactId>org.insilico.core.application.ui</artifactId>
 	<packaging>eclipse-plugin</packaging>
-	<name>Light Theme</name>
+	<name>Core Application UI</name>
 
 	<build>
 		<sourceDirectory>src</sourceDirectory>

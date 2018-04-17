@@ -11,5 +11,5 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>org.insilico.core</artifactId>
 	<packaging>eclipse-feature</packaging>
-	<name>InSilico - Core</name>
+	<name>Core Feature</name>
 </project>

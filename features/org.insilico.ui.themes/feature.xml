@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.insilico.ui.themes"
-      label="Themes"
-      version="1.0.0.qualifier">
+      label="Themes Feature"
+      version="1.0.0.qualifier"
+      provider-name="Draeger Lab">
 
    <description url="http://www.example.com/description">
       [Enter Feature Description here.]

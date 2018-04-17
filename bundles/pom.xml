@@ -13,12 +13,10 @@
 	<packaging>pom</packaging>
 	<name>InSilico Bundles</name>
 
-
 	<modules>
-		
-		<module>org.insilico.launcher</module>
+		<module>org.insilico.core.application</module>
+		<module>org.insilico.core.application.ui</module>
+		<module>org.insilico.core.ui</module>
 		<module>org.insilico.ui.themes.light</module>
-		<module>org.insilico.workbench</module>
-		<module>org.insilico.ui.components</module>
 	</modules>
 </project>

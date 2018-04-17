@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="InSilico" uid="org.insilico.lab" id="org.insilico.launcher.launcher" application="org.insilico.launcher.main" version="1.0.0" useFeatures="true" includeLaunchers="true">
+<product name="InSilico" uid="org.insilico.lab" id="org.insilico.core.application.product" application="org.insilico.core.application.launcher" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
