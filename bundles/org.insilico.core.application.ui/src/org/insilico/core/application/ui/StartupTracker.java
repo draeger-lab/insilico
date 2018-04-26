@@ -1,16 +1,14 @@
-package org.insilico.core.application;
+package org.insilico.core.application.ui;
 
 import org.eclipse.fx.core.app.ApplicationContext;
+import org.eclipse.fx.ui.dialogs.MessageDialog;
 import org.eclipse.fx.ui.services.startup.StartupProgressTrackerService;
-import org.insilico.core.application.splash.ErrorWindow;
-import org.insilico.core.application.splash.SplashScreen;
 
 public class StartupTracker implements StartupProgressTrackerService {
-    private SplashScreen splash;
-    private ErrorWindow errorWindow;
 
     @Override
     public OSGiRV applicationLaunched(ApplicationContext applicationContext) {
+        applicationContext.applicationRunning();
         return OSGiRV.CONTINUE;
     }
 
@@ -21,38 +19,25 @@ public class StartupTracker implements StartupProgressTrackerService {
 
             switch (state) {
                 case DI_SYSTEM_INITIALIZED:
+                    // Starting
+
                     break;
                 case JAVAFX_INITIALIZED:
-                    if (splash == null) {
-                        splash = new SplashScreen();
-                        splash.show();
-                    }
                     break;
                 case JAVAFX_INITIALIZED_LAUNCHER_THREAD:
-                    // Show splash
                     break;
                 case LOCATION_CHECK_FAILED:
-                    // Stop splash
-                    if (splash != null) {
-                        splash.hide();
-                        splash = null;
-                    }
-                    // Show error view
-                    errorWindow = new ErrorWindow();
-                    errorWindow.show();
+                    // Failed
+                    MessageDialog.openErrorDialog(null, "Already Running",
+                            "There is already a running instance of InSilico.");
                     break;
                 case POST_CONTEXT_LF_FINISHED:
                     break;
                 case WORKBENCH_GUI_SHOWING:
                     break;
                 case WORKBENCH_GUI_SHOWN:
-                    // Hide splash
-                    if (splash != null) {
-                        splash.hide();
-                        splash = null;
-                    }
+                    // Done
 
-                    // Check if a lab was specified
                     break;
                 default:
                     break;
