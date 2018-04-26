@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_w1COYDX7EeiVUI7ukjRSGA">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_FMfPsDX8EeiVUI7ukjRSGA" featurename="snippets" parentElementId="org.insilico.core.application">
+    <elements xsi:type="basic:TrimmedWindow" xmi:id="_0GbRMDX8EeiVUI7ukjRSGA" elementId="org.insilico.core.application.ui.projectWindow" label="InSilico - Project" width="800" height="600">
+      <tags>efx-center-on-screen</tags>
+      <children xsi:type="advanced:PerspectiveStack" xmi:id="_gJTWIEPLEeiWeNpI5yJV_g" elementId="org.insilico.core.application.ui.perspectivestack.0">
+        <children xsi:type="advanced:Perspective" xmi:id="_gvGx4EPLEeiWeNpI5yJV_g" elementId="org.insilico.core.application.ui.perspective.default" label="Default">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_Xy-8MDjaEei1pY_kO3sSRA" elementId="org.insilico.core.application.ui.projectWindow.partsashcontainer.1">
+            <tags>fx_fixedLayout</tags>
+            <children xsi:type="basic:PartSashContainer" xmi:id="_49qDkDd1EeiaNeAKod3z1w" elementId="org.insilico.core.application.ui.projectWindow.partsashcontainer.0" horizontal="true">
+              <persistedState key="fx_layout_grab_vertical" value="true"/>
+              <children xsi:type="basic:Part" xmi:id="_6QAcQDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.part.nav" containerData="2" label="Nav"/>
+              <children xsi:type="basic:PartStack" xmi:id="_7wCroDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.editorstack" containerData="3"/>
+            </children>
+            <children xsi:type="basic:Part" xmi:id="_rJw14Dd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.statusbar" contributionURI="bundleclass://org.insilico.workbench/o.workbench.handler.StatusBarPart" label="">
+              <persistedState key="fx_layout_height" value="24"/>
+            </children>
+          </children>
+        </children>
+        <children xsi:type="advanced:Perspective" xmi:id="_ipVC4EPLEeiWeNpI5yJV_g" elementId="org.insilico.core.application.ui.perspective.fullscreen" label="Fullscreen"/>
+      </children>
+      <mainMenu xmi:id="_3nW7wElMEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.menu.0">
+        <children xsi:type="menu:Menu" xmi:id="_4rqRYElMEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.menu.file" label="File"/>
+        <children xsi:type="menu:Menu" xmi:id="_5445gElMEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.menu.test" label="Test"/>
+      </mainMenu>
+      <trimBars xmi:id="_37s7cElJEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.topbar">
+        <children xsi:type="menu:ToolBar" xmi:id="_BpiyYElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.toolbar.0">
+          <children xsi:type="menu:HandledToolItem" xmi:id="_Cysy0ElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.handledtoolitem.foo" label="Foo"/>
+          <children xsi:type="menu:HandledToolItem" xmi:id="_D1zOkElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.handledtoolitem.bar" label="Bar"/>
+        </children>
+        <children xsi:type="menu:ToolControl" xmi:id="_JaoJEElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.toolcontrol.0"/>
+      </trimBars>
+      <trimBars xmi:id="_8hnWoElJEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.bottombar" side="Bottom">
+        <children xsi:type="menu:ToolBar" xmi:id="_Xkzv0ElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.toolbar.1">
+          <children xsi:type="menu:HandledToolItem" xmi:id="_YkC_QElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.handledtoolitem.test" label="TEST"/>
+          <children xsi:type="menu:ToolBarSeparator" xmi:id="_Zpar4ElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.toolbarseparator.0"/>
+        </children>
+      </trimBars>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_kME34DX9EeiVUI7ukjRSGA" featurename="commands" parentElementId="org.insilico.core.application">
+    <elements xsi:type="commands:Command" xmi:id="_lybxsDX9EeiVUI7ukjRSGA" elementId="org.insilico.core.application.ui.commands.openProjectWindow" commandName="Open Project Window" description="Opens a window whcih displays the content of the given project.">
+      <parameters xmi:id="_RRhAUEO8EeiWeNpI5yJV_g" elementId="org.insilico.core.application.ui.parameters.project" name="Project" optional="false"/>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_M3ZToDYBEeiVUI7ukjRSGA" featurename="handlers" parentElementId="org.insilico.core.application">
+    <elements xsi:type="commands:Handler" xmi:id="_P8cZADYBEeiVUI7ukjRSGA" elementId="org.insilico.core.application.ui.handlers.openProjectWindowHandler" contributionURI="bundleclass://org.insilico.core.application.ui/org.insilico.core.application.ui.handlers.OpenProjectWindowHandler" command="_lybxsDX9EeiVUI7ukjRSGA"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_R_GL4ElKEeieS42OoRLPHw" featurename="children" parentElementId="org.insilico.core.application">
+    <elements xsi:type="basic:Window" xmi:id="_N4xJsEI5EeiFffabvctJGg" elementId="org.insilico.core.application.ui.launcherWindow" label="InSilico Launcher" width="600" height="400">
+      <tags>efx-center-on-screen</tags>
+      <children xsi:type="basic:PartSashContainer" xmi:id="_N4xJsUI5EeiFffabvctJGg" elementId="org.insilico.core.application.ui.launcher.sash" horizontal="true">
+        <tags>fx_fixedLayout</tags>
+        <children xsi:type="basic:Part" xmi:id="_N4xJskI5EeiFffabvctJGg" elementId="org.insilico.core.application.ui.launcher.projectList" containerData="1" contributionURI="bundleclass://org.insilico.core.application.ui/org.insilico.core.application.ui.parts.ProjectListPart" label="Project List">
+          <persistedState key="fx_layout_grab_horizontal&#x9;" value="true"/>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_N4xJs0I5EeiFffabvctJGg" elementId="org.insilico.core.application.ui.launcher.logo" containerData="2" contributionURI="bundleclass://org.insilico.core.application.ui/org.insilico.core.application.ui.parts.LogoPart" label="Logo Area">
+          <persistedState key="fx_layout_grab_horizontal" value="true"/>
+        </children>
+      </children>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmi:id="_fa6nYRS-Eeii2_x8mUNL6A" elementId="org.insilico.core.application" bindingContexts="_fa6nYBS-Eeii2_x8mUNL6A">
+  <handlers xmi:id="_R7ZhYEIoEeiFffabvctJGg" elementId="org.insilico.core.application.handlers.createProjectHandler" contributionURI="bundleclass://org.insilico.core.application/org.insilico.core.application.handlers.CreateProjectHandler" command="_c9r4MEIqEeiFffabvctJGg"/>
+  <rootContext xmi:id="_fa6nYBS-Eeii2_x8mUNL6A" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_fa6nYhS-Eeii2_x8mUNL6A" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_fa6nYxS-Eeii2_x8mUNL6A" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_c9r4MEIqEeiFffabvctJGg" elementId="org.insilico.core.application.commands.createProject" commandName="Create Project" description="Creates a new project.">
+    <parameters xmi:id="_iSpKsEIqEeiFffabvctJGg" elementId="org.insilico.core.application.parameters.location" name="Project Location" optional="false"/>
+    <parameters xmi:id="_sk4kgEO0EeiWeNpI5yJV_g" elementId="org.insilico.core.application.parameters.name" name="Project Name"/>
+  </commands>
+  <addons xmi:id="_fa6nZBS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_fa6nZRS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_fa6nZhS-Eeii2_x8mUNL6A" elementId="org.eclipse.fx.ui.keybindings.e4.service" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon"/>
+  <addons xmi:id="_fa6nZxS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_fa6naBS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_fa6naRS-Eeii2_x8mUNL6A" elementId="org.eclipse.fx.ui.keybindings.e4.model" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon"/>
+  <addons xmi:id="_fa6nahS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.workbench.addons.HandlerProcessingAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_GZaKQEI7EeiFffabvctJGg" elementId="org.insilico.core.application.addon.0"/>
+</application:Application>
