@@ -7,7 +7,7 @@ git clone https://github.com/draeger-lab/insilico.git
 git checkout dev
 
 # Build dependencies
-cd insilico/releng/org.draegerlab.insilico.maven.dependencies
+cd insilico/releng/org.insilico.maven.dependencies
 mvn clean p2:site
 
 # Build product
@@ -18,7 +18,7 @@ mvn clean verify
 ## Start from console
 The software is build in the following folders:
 ```
-cd releng/org.draegerlab.insilico.product/target/products/insilico/
+cd releng/org.insilico.product/target/products/insilico/
 
 ```
 Go to the folder for your architecture
@@ -34,7 +34,6 @@ and, depending on your operating system, start with
 Install `Eclipse for RCP and RAP Developers (plugin developers)`.
 
 The following additional eclipse plugins are required (eclipse marketplace)
-* `Kotlin Plugin for Eclipse`
 * `Maven Tycho Utilities 1.0.0`
 
 **Import project** via
@@ -45,16 +44,16 @@ File -> Import -> Maven -> Existing Maven Projects
 Select the repositoy root path.
 
 **Activate project (dependencies)** via  
-* Select `org.draegerlab.insilico.target.target`
+* Select `org.insilico.target.target`
 * `Activate Target Platform` and `Reload Target Platform`
 
 **Build project** via  
-* Right click on `org.draegerlab.insilico.parent.pom.xml`
+* Right click on `org.insilico.parent.pom.xml`
 * Run as `Maven build..`
 * Goals `clean verify`
 
 **Run project** via  
-* Select `org.draegerlab.insilico.product` -> `org.draegerlab.insilico.product`
+* Select `org.insilico.product` -> `org.insilico.product`
 * `Launch an Eclipse application`
 * `Run`
 
