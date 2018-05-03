@@ -61,14 +61,19 @@ public class OpenProjectWindowHandler {
                 (MTrimmedWindow) ms.cloneSnippet(app, Constants.PROJECT_WINDOW_ID, null);
         window.setLabel("InSilico - " + project.getName());
 
-        // Create context and fill
-        IEclipseContext windowCtx =
-                app.getContext().createChild(Constants.nameOfWindowContext(project));
-        windowCtx.set(IProject.class, project);
-        window.setContext(windowCtx);
+        // Temporary store project in context.
+        app.getContext().set(IProject.class, project);
 
         // Show window
         app.getChildren().add(window);
+
+        // Move value down
+        app.getContext().remove(IProject.class);
+        window.getContext().set(IProject.class, project);
+
+        // Focus window
+        app.setSelectedElement(window);
+        window.getContext().activate();
     }
 
 

@@ -5,36 +5,44 @@
       <tags>efx-center-on-screen</tags>
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_gJTWIEPLEeiWeNpI5yJV_g" elementId="org.insilico.core.application.ui.perspectivestack.0">
         <children xsi:type="advanced:Perspective" xmi:id="_gvGx4EPLEeiWeNpI5yJV_g" elementId="org.insilico.core.application.ui.perspective.default" label="Default">
-          <children xsi:type="basic:PartSashContainer" xmi:id="_Xy-8MDjaEei1pY_kO3sSRA" elementId="org.insilico.core.application.ui.projectWindow.partsashcontainer.1">
-            <tags>fx_fixedLayout</tags>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_49qDkDd1EeiaNeAKod3z1w" elementId="org.insilico.core.application.ui.projectWindow.partsashcontainer.0" horizontal="true">
-              <persistedState key="fx_layout_grab_vertical" value="true"/>
-              <children xsi:type="basic:Part" xmi:id="_6QAcQDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.part.nav" containerData="2" label="Nav"/>
-              <children xsi:type="basic:PartStack" xmi:id="_7wCroDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.editorstack" containerData="3"/>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_49qDkDd1EeiaNeAKod3z1w" elementId="org.insilico.core.application.ui.partsashcontainer.0" horizontal="true">
+            <persistedState key="fx_layout_grab_vertical" value="true"/>
+            <children xsi:type="basic:PartStack" xmi:id="_7wCroDd1EeiaNeAKod3z1w" elementId="org.insilico.core.application.ui.partstack.nav" containerData="3">
+              <tags>fx_scrollable</tags>
+              <children xsi:type="basic:Part" xmi:id="_6QAcQDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.part.nav" containerData="2" contributionURI="bundleclass://org.insilico.core.application.ui/org.insilico.core.application.ui.parts.NavigatorPart" label="Navigator">
+                <menus xsi:type="menu:PopupMenu" xmi:id="_phjbcE7uEeixccH-uztkrw" elementId="org.insilico.core.application.ui.popupmenu.0">
+                  <children xsi:type="menu:Menu" xmi:id="_rFdeME7uEeixccH-uztkrw" elementId="org.insilico.core.application.ui.menu.new" label="New..."/>
+                </menus>
+              </children>
             </children>
-            <children xsi:type="basic:Part" xmi:id="_rJw14Dd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.statusbar" contributionURI="bundleclass://org.insilico.workbench/o.workbench.handler.StatusBarPart" label="">
-              <persistedState key="fx_layout_height" value="24"/>
+            <children xsi:type="basic:PartStack" xmi:id="_9cLX4E4fEeixccH-uztkrw" elementId="org.insilico.core.application.ui.partstack.editors">
+              <tags>fx_scrollable</tags>
+              <tags>editorContainer</tags>
+              <children xsi:type="basic:Part" xmi:id="_Q4lGME4gEeixccH-uztkrw" elementId="org.insilico.core.application.ui.part.editor" label="Editor"/>
             </children>
           </children>
         </children>
-        <children xsi:type="advanced:Perspective" xmi:id="_ipVC4EPLEeiWeNpI5yJV_g" elementId="org.insilico.core.application.ui.perspective.fullscreen" label="Fullscreen"/>
       </children>
+      <variables>project</variables>
+      <variables>activeInput</variables>
       <mainMenu xmi:id="_3nW7wElMEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.menu.0">
-        <children xsi:type="menu:Menu" xmi:id="_4rqRYElMEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.menu.file" label="File"/>
-        <children xsi:type="menu:Menu" xmi:id="_5445gElMEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.menu.test" label="Test"/>
+        <persistedState key="fx.menubar.native" value="true"/>
+        <children xsi:type="menu:Menu" xmi:id="_4rqRYElMEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.menu.file" label="File">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_7-JSkE7uEeixccH-uztkrw" elementId="org.insilico.core.application.ui.handledmenuitem.newfile" label="New File"/>
+        </children>
+        <children xsi:type="menu:Menu" xmi:id="_5445gElMEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.menu.edit" label="Edit"/>
+        <children xsi:type="menu:Menu" xmi:id="_uQg0EE4hEeixccH-uztkrw" elementId="org.insilico.core.application.ui.menu.project" label="Project"/>
+        <children xsi:type="menu:Menu" xmi:id="_qAJLEE4hEeixccH-uztkrw" elementId="org.insilico.core.application.ui.menu.view" label="View"/>
+        <children xsi:type="menu:Menu" xmi:id="_reVAUE4hEeixccH-uztkrw" elementId="org.insilico.core.application.ui.menu.help" label="Help"/>
       </mainMenu>
       <trimBars xmi:id="_37s7cElJEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.topbar">
         <children xsi:type="menu:ToolBar" xmi:id="_BpiyYElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.toolbar.0">
-          <children xsi:type="menu:HandledToolItem" xmi:id="_Cysy0ElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.handledtoolitem.foo" label="Foo"/>
-          <children xsi:type="menu:HandledToolItem" xmi:id="_D1zOkElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.handledtoolitem.bar" label="Bar"/>
+          <children xsi:type="menu:HandledToolItem" xmi:id="_OS7nsE4iEeixccH-uztkrw" elementId="org.insilico.core.application.ui.handledtoolitem.new" label="New..."/>
         </children>
         <children xsi:type="menu:ToolControl" xmi:id="_JaoJEElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.toolcontrol.0"/>
       </trimBars>
       <trimBars xmi:id="_8hnWoElJEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.bottombar" side="Bottom">
-        <children xsi:type="menu:ToolBar" xmi:id="_Xkzv0ElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.toolbar.1">
-          <children xsi:type="menu:HandledToolItem" xmi:id="_YkC_QElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.handledtoolitem.test" label="TEST"/>
-          <children xsi:type="menu:ToolBarSeparator" xmi:id="_Zpar4ElNEeieS42OoRLPHw" elementId="org.insilico.core.application.ui.toolbarseparator.0"/>
-        </children>
+        <children xsi:type="menu:ToolControl" xmi:id="_-Yp8UE4hEeixccH-uztkrw" elementId="org.insilico.core.application.ui.indicatorbar"/>
       </trimBars>
     </elements>
   </fragments>

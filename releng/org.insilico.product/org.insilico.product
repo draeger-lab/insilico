@@ -38,6 +38,7 @@
       <feature id="org.insilico.core" version="1.0.0.qualifier"/>
       <feature id="org.insilico.jsbml" version="1.0.0.qualifier"/>
       <feature id="org.insilico.ui.themes" version="1.0.0.qualifier"/>
+      <feature id="org.eclipse.fx.code.base.feature" version="3.0.0.201706050601"/>
    </features>
 
    <configurations>
