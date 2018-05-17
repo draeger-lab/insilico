@@ -16,5 +16,4 @@
   <addons xmi:id="_fa6naBS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
   <addons xmi:id="_fa6naRS-Eeii2_x8mUNL6A" elementId="org.eclipse.fx.ui.keybindings.e4.model" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon"/>
   <addons xmi:id="_fa6nahS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.workbench.addons.HandlerProcessingAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
-  <addons xmi:id="_GZaKQEI7EeiFffabvctJGg" elementId="org.insilico.core.application.addon.0"/>
 </application:Application>

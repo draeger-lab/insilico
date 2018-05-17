@@ -38,6 +38,8 @@ public class NavigatorPart {
     private void handleEvent(ResourceEvent<ResourceItem> e) {
         e.getResourceItems().stream().filter(r -> r instanceof FileItem).map(r -> (FileItem) r)
                 .forEach(this::handle);
+
+
     }
 
     private void handle(FileItem item) {
