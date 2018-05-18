@@ -18,5 +18,6 @@
 		<module>org.insilico.core.application.ui</module>
 		<module>org.insilico.core.ui</module>
 		<module>org.insilico.ui.themes.light</module>
+		<module>org.insilico.jsbml.core</module>
 	</modules>
 </project>
