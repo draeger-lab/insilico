@@ -4,6 +4,7 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
+    public static final String SYMBOLIC_NAME = "org.insilico.jsbml.core";
 
     private static BundleContext context;
 

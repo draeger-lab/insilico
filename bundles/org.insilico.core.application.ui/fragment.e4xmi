@@ -18,7 +18,6 @@
             <children xsi:type="basic:PartStack" xmi:id="_9cLX4E4fEeixccH-uztkrw" elementId="org.insilico.core.application.ui.partstack.editors">
               <tags>fx_scrollable</tags>
               <tags>editorContainer</tags>
-              <children xsi:type="basic:Part" xmi:id="_Q4lGME4gEeixccH-uztkrw" elementId="org.insilico.core.application.ui.part.editor" label="Editor"/>
             </children>
           </children>
         </children>
