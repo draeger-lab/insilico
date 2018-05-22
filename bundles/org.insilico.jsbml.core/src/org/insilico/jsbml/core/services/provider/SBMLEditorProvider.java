@@ -1,8 +1,17 @@
-package org.insilico.jsbml.core.services;
+package org.insilico.jsbml.core.services.provider;
 
 import org.eclipse.fx.code.editor.fx.e4.EditorClassURLProvider;
 import org.insilico.jsbml.core.editor.SBMLEditor;
+import org.osgi.service.component.annotations.Component;
 
+/**
+ * OSGi Service Component which provides a editor part for SBML files. The editor is provides via
+ * the {@link EditorClassURLProvider} service.
+ * 
+ * @author roman
+ *
+ */
+@Component
 public class SBMLEditorProvider implements EditorClassURLProvider {
 
     @Override

@@ -27,5 +27,5 @@ Require-Bundle: org.eclipse.e4.ui.model.workbench;bundle-version="1.2.0.v2016022
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: Draeger Lab
 Import-Package: javax.inject;version="1.0.0"
-Service-Component: OSGI-INF/services/StartupProgressTracker.xml
+Service-Component: OSGI-INF/services/org.insilico.core.application.ui.services.provider.StartupTracker.xml
 Bundle-ActivationPolicy: lazy

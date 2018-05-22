@@ -16,5 +16,6 @@
 
 	<modules>
 		<module>org.insilico.launcher.test</module>
+		<module>org.insilico.jsbml.core.tests</module>
 	</modules>
 </project>
