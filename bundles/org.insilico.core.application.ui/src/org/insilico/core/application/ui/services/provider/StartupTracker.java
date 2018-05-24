@@ -1,12 +1,11 @@
 package org.insilico.core.application.ui.services.provider;
 
 import org.eclipse.fx.core.app.ApplicationContext;
-import org.eclipse.fx.ui.dialogs.MessageDialog;
 import org.eclipse.fx.ui.services.startup.StartupProgressTrackerService;
+import org.osgi.framework.FrameworkUtil;
 import org.osgi.service.component.annotations.Component;
 
 @Component
-@SuppressWarnings("restriction")
 public class StartupTracker implements StartupProgressTrackerService {
 
     @Override
@@ -30,9 +29,16 @@ public class StartupTracker implements StartupProgressTrackerService {
                 case JAVAFX_INITIALIZED_LAUNCHER_THREAD:
                     break;
                 case LOCATION_CHECK_FAILED:
-                    // Failed
-                    MessageDialog.openErrorDialog(null, "Already Running",
-                            "There is already a running instance of InSilico.");
+                    // Stop framework
+                    try {
+                        FrameworkUtil.getBundle(StartupTracker.class).getBundleContext()
+                                .getBundle(0).stop();
+                        // EclipseStarter.shutdown();
+                    }
+                    catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
                     break;
                 case POST_CONTEXT_LF_FINISHED:
                     break;
