@@ -2,7 +2,6 @@ package org.insilico.jsbml.core.services.provider;
 
 import static org.eclipse.fx.code.editor.Constants.DOCUMENT_URL;
 
-import java.io.File;
 import java.net.URI;
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -15,8 +14,8 @@ import org.eclipse.e4.core.di.IInjector;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.insilico.jsbml.core.SBMLUtils;
 import org.osgi.service.component.annotations.Component;
+import org.sbml.jsbml.JSBML;
 import org.sbml.jsbml.SBMLDocument;
-import org.sbml.jsbml.SBMLReader;
 
 
 
@@ -70,7 +69,8 @@ public class SBMLDocumentLoader extends ContextFunction {
                 // Load if needed
                 try {
                     URI url = URIUtil.fromString(urlString);
-                    doc = SBMLReader.read(new File(url));
+                    doc = JSBML.readSBMLFromFile(url.getPath());
+                    // doc = SBMLReader.read(new File(url));
                     cache.put(urlString, doc);
                 }
                 catch (Exception e) {

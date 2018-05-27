@@ -20,7 +20,7 @@ public class DocumentTreeView {
     private SBMLDocument doc;
 
     @PostConstruct
-    private void init(BorderPane parent, SBMLDocument doc) {
+    private void init(BorderPane parent) {
         TreeView<SBase> docTreeView = new TreeView<>(convertToTreeItem(doc, 2));
 
         parent.setCenter(docTreeView);

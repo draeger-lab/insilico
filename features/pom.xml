@@ -15,8 +15,8 @@
 
 
 	<modules>
-		<module>org.insilico.core</module>
-		<module>org.insilico.jsbml</module>
-		<module>org.insilico.ui.themes</module>
+		<module>org.insilico.core.feature</module>
+		<module>org.insilico.jsbml.feature</module>
+		<module>org.insilico.ui.feature</module>
 	</modules>
 </project>

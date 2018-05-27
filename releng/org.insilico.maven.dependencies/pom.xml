@@ -15,6 +15,14 @@
 		<graphstream.ui.version>0.1</graphstream.ui.version>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>JSBML-SNAPSHOT</id>
+			<name>The JSBML Snapshot repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="InSilico" uid="org.insilico.lab" id="org.insilico.core.application.product" application="org.insilico.core.application.launcher" version="1.0.0" useFeatures="true" includeLaunchers="true">
+<product name="InSilico" uid="org.insilico.lab" id="org.insilico.core.product" application="org.insilico.core.launcher" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -35,11 +35,11 @@
 
    <features>
       <feature id="org.eclipse.fx.runtime.e4fx.feature"/>
-      <feature id="org.insilico.core" version="1.0.0.qualifier"/>
-      <feature id="org.insilico.jsbml" version="1.0.0.qualifier"/>
-      <feature id="org.insilico.ui.themes" version="1.0.0.qualifier"/>
       <feature id="org.eclipse.fx.code.base.feature" version="3.0.0.201706050601"/>
       <feature id="org.eclipse.fx.code.langs.feature" version="3.0.0.201706050601"/>
+      <feature id="org.insilico.core.feature" version="1.0.0.qualifier"/>
+      <feature id="org.insilico.jsbml.feature" version="1.0.0.qualifier"/>
+      <feature id="org.insilico.ui.feature" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>

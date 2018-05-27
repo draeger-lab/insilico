@@ -51,12 +51,12 @@
 							</requirement>
 							<requirement>
 								<type>eclipse-feature</type>
-								<id>org.insilico.core</id>
+								<id>org.insilico.core.feature</id>
 								<versionRange>0.0.0</versionRange>
 							</requirement>
 							<requirement>
 								<type>eclipse-feature</type>
-								<id>org.insilico.jsbml</id>
+								<id>org.insilico.jsbml.feature</id>
 								<versionRange>0.0.0</versionRange>
 							</requirement>
 						</extraRequirements>
