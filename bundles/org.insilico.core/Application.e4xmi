@@ -18,7 +18,6 @@
   <addons xmi:id="_fa6naBS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
   <addons xmi:id="_fa6naRS-Eeii2_x8mUNL6A" elementId="org.eclipse.fx.ui.keybindings.e4.model" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon"/>
   <addons xmi:id="_fa6nahS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.workbench.addons.HandlerProcessingAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
-  <addons xmi:id="_mhTiYGEJEeiFLKNi0Omi7w" elementId="org.insilico.core.application.addon.0"/>
   <categories xmi:id="_rhqeoGGdEeiFLKNi0Omi7w" elementId="org.insilico.core.category.file" name="File"/>
   <categories xmi:id="_vV3wEGGdEeiFLKNi0Omi7w" elementId="org.insilico.core.category.edit" name="Edit"/>
   <categories xmi:id="_x5KMMGGdEeiFLKNi0Omi7w" elementId="org.insilico.core.category.window" name="Window"/>

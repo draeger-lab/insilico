@@ -18,7 +18,7 @@ import org.eclipse.e4.core.services.log.Logger;
 import org.eclipse.e4.ui.model.application.MApplication;
 import org.eclipse.e4.ui.model.application.ui.basic.MTrimmedWindow;
 import org.eclipse.e4.ui.workbench.modeling.EModelService;
-import org.insilico.ui.Constants;
+import org.insilico.ui.AppModelId;
 
 /**
  * Handler which opens a new lab window and displays the content of the given project. The project
@@ -42,7 +42,7 @@ public class OpenProjectWindowHandler {
     Logger logger;
 
     @Execute
-    public void openWindow(@Named(Constants.PROJECT_PARAMETER_ID) String projectName) {
+    public void openWindow(@Named(AppModelId.COMMANDPARAMETER_ORG_INSILICO_UI_PARAMETER_PROJECT) String projectName) {
 
         IProject project = ws.getRoot().getProject(projectName);
 
@@ -57,8 +57,7 @@ public class OpenProjectWindowHandler {
         }
 
         // Setup window
-        MTrimmedWindow window =
-                (MTrimmedWindow) ms.cloneSnippet(app, Constants.PROJECT_WINDOW_ID, null);
+        MTrimmedWindow window = (MTrimmedWindow) ms.cloneSnippet(app, AppModelId.TRIMMEDWINDOW_ORG_INSILICO_UI_WINDOW, null);
         window.setLabel("InSilico - " + project.getName());
 
         // Temporary store project in context.
@@ -89,9 +88,9 @@ public class OpenProjectWindowHandler {
 
 
         Map<String, Object> params = new HashMap<String, Object>();
-        params.put(Constants.PROJECT_PARAMETER_ID, project.getName());
+        params.put(AppModelId.COMMANDPARAMETER_ORG_INSILICO_UI_PARAMETER_PROJECT, project.getName());
 
-        return cs.createCommand(Constants.OPEN_PROJECT_WINDOW_COMMAND_ID, params);
+        return cs.createCommand(AppModelId.COMMAND_ORG_INSILICO_UI_COMMAND_PROJECT_OPEN, params);
     }
 
 

@@ -5,17 +5,26 @@
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_FMfPsDX8EeiVUI7ukjRSGA" featurename="snippets" parentElementId="org.insilico.core.application">
     <elements xsi:type="basic:TrimmedWindow" xmi:id="_0GbRMDX8EeiVUI7ukjRSGA" elementId="org.insilico.ui.window" label="InSilico - Project" width="800" height="600">
       <tags>efx-center-on-screen</tags>
-      <children xsi:type="advanced:PerspectiveStack" xmi:id="_gJTWIEPLEeiWeNpI5yJV_g" elementId="org.insilico.core.application.ui.perspectivestack.0">
-        <children xsi:type="advanced:Perspective" xmi:id="_gvGx4EPLEeiWeNpI5yJV_g" elementId="org.insilico.core.application.ui.perspective.default" label="Default">
-          <children xsi:type="basic:PartSashContainer" xmi:id="_49qDkDd1EeiaNeAKod3z1w" elementId="org.insilico.core.application.ui.partsashcontainer.0" horizontal="true">
+      <children xsi:type="advanced:PerspectiveStack" xmi:id="_gJTWIEPLEeiWeNpI5yJV_g" elementId="org.insilico.ui.perspective.stack">
+        <children xsi:type="advanced:Perspective" xmi:id="_gvGx4EPLEeiWeNpI5yJV_g" elementId="org.insilico.ui.perspective.default" label="Default">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_49qDkDd1EeiaNeAKod3z1w" elementId="org.insilico.ui.sash.0" horizontal="true">
             <persistedState key="fx_layout_grab_vertical" value="true"/>
-            <children xsi:type="basic:PartStack" xmi:id="_7wCroDd1EeiaNeAKod3z1w" elementId="org.insilico.core.application.ui.partstack.nav" containerData="3000">
+            <children xsi:type="basic:PartStack" xmi:id="_7wCroDd1EeiaNeAKod3z1w" elementId="org.insilico.ui.stack.nav.primary" containerData="3000">
               <tags>fx_scrollable</tags>
               <tags>org.eclipse.e4.primaryNavigationStack</tags>
-              <children xsi:type="basic:Part" xmi:id="_6QAcQDd1EeiaNeAKod3z1w" elementId="org.draegerlab.insilico.workbench.part.nav" containerData="2" contributionURI="bundleclass://org.insilico.core.application.ui/org.insilico.core.application.ui.parts.NavigatorPart" label="Navigator">
-                <menus xsi:type="menu:PopupMenu" xmi:id="_phjbcE7uEeixccH-uztkrw" elementId="org.insilico.core.application.ui.popupmenu.0">
-                  <children xsi:type="menu:Menu" xmi:id="_rFdeME7uEeixccH-uztkrw" elementId="org.insilico.core.application.ui.menu.new" label="New..."/>
-                </menus>
+              <children xsi:type="basic:Part" xmi:id="_6QAcQDd1EeiaNeAKod3z1w" elementId="org.insilico.ui.part.navigator" containerData="2" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.parts.NavigatorPart" label="Navigator"/>
+            </children>
+            <children xsi:type="basic:PartSashContainer" xmi:id="_6I0aoGGwEeiFPq5DvKv2Yw" elementId="org.insilico.ui.sash.1" containerData="7000">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_3H5nUGGwEeiFPq5DvKv2Yw" elementId="org.insilico.ui.sash.2" containerData="3000" horizontal="true">
+                <children xsi:type="advanced:Placeholder" xmi:id="_snXdQGGvEeiFPq5DvKv2Yw" elementId="org.insilico.ui.area.editors" containerData="3000" ref="_GCzF4GGcEeiFLKNi0Omi7w"/>
+                <children xsi:type="basic:PartStack" xmi:id="_EoznkGGxEeiFPq5DvKv2Yw" elementId="org.insilico.ui.partstack.0" containerData="1000">
+                  <tags>org.eclipse.e4.secondaryNavigationStack</tags>
+                  <tags>fx_scrollable</tags>
+                </children>
+              </children>
+              <children xsi:type="basic:PartStack" xmi:id="_FRKoEGGxEeiFPq5DvKv2Yw" elementId="org.insilico.ui.partstack.1" containerData="1000">
+                <tags>org.eclipse.e4.secondaryDataStack</tags>
+                <tags>fx_scrollable</tags>
               </children>
             </children>
           </children>
@@ -26,8 +35,8 @@
       <mainMenu xmi:id="_3nW7wElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.main">
         <persistedState key="fx.menubar.native" value="true"/>
         <children xsi:type="menu:Menu" xmi:id="_4rqRYElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.file" label="&amp;File">
-          <children xsi:type="menu:Menu" xmi:id="_X91dMGGeEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file" label="&amp;New"/>
-          <children xsi:type="menu:MenuSeparator" xmi:id="_3gXaYGGfEeiFLKNi0Omi7w" elementId="org.insilico.core.application.ui.menuseparator.0"/>
+          <children xsi:type="menu:Menu" xmi:id="_X91dMGGeEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file.new" label="&amp;New"/>
+          <children xsi:type="menu:MenuSeparator" xmi:id="_3gXaYGGfEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file.seperator.0"/>
           <children xsi:type="menu:HandledMenuItem" xmi:id="_260dUGGfEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file.move" label="Move..." tooltip="Moves the selected item." command="__4ZcUGGfEeiFLKNi0Omi7w"/>
         </children>
         <children xsi:type="menu:Menu" xmi:id="_5445gElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.edit" label="&amp;Edit"/>
@@ -35,16 +44,16 @@
         <children xsi:type="menu:Menu" xmi:id="_qAJLEE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.view" label="&amp;View"/>
         <children xsi:type="menu:Menu" xmi:id="_reVAUE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.help" label="&amp;Help"/>
       </mainMenu>
-      <sharedElements xsi:type="advanced:Area" xmi:id="_GCzF4GGcEeiFLKNi0Omi7w" elementId="org.insilico.ui.editor">
-        <children xsi:type="basic:PartStack" xmi:id="_9cLX4E4fEeixccH-uztkrw" elementId="org.insilico.core.application.ui.partstack.editors" containerData="8000">
+      <sharedElements xsi:type="advanced:Area" xmi:id="_GCzF4GGcEeiFLKNi0Omi7w" elementId="org.insilico.ui.area.editors" containerData="8000" selectedElement="_9cLX4E4fEeixccH-uztkrw" label="Editor Area">
+        <children xsi:type="basic:PartStack" xmi:id="_9cLX4E4fEeixccH-uztkrw" elementId="org.insilico.ui.stack.editors" containerData="8000">
           <tags>fx_scrollable</tags>
           <tags>editorContainer</tags>
           <tags>org.eclipse.e4.primaryDataStack</tags>
           <tags>EditorStack</tags>
         </children>
       </sharedElements>
-      <trimBars xmi:id="_37s7cElJEeieS42OoRLPHw" elementId="org.insilico.ui.trim.top"/>
-      <trimBars xmi:id="_8hnWoElJEeieS42OoRLPHw" elementId="org.insilico.ui.trim.bottom" side="Bottom"/>
+      <trimBars xmi:id="_37s7cElJEeieS42OoRLPHw" elementId="org.insilico.ui.trim.tools"/>
+      <trimBars xmi:id="_8hnWoElJEeieS42OoRLPHw" elementId="org.insilico.ui.trim.status" side="Bottom"/>
     </elements>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_kME34DX9EeiVUI7ukjRSGA" featurename="commands" parentElementId="org.insilico.core.application">
@@ -60,10 +69,10 @@
       <tags>efx-center-on-screen</tags>
       <children xsi:type="basic:PartSashContainer" xmi:id="_N4xJsUI5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.sash" horizontal="true">
         <tags>fx_fixedLayout</tags>
-        <children xsi:type="basic:Part" xmi:id="_N4xJskI5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.projects" containerData="1" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.parts.ProjectListPart" label="Project List">
+        <children xsi:type="basic:Part" xmi:id="_N4xJskI5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.projects" containerData="1000" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.parts.ProjectListPart" label="Project List">
           <persistedState key="fx_layout_grab_horizontal&#x9;" value="true"/>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_N4xJs0I5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.logo" containerData="2" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.parts.LogoPart" label="Logo Area">
+        <children xsi:type="basic:Part" xmi:id="_N4xJs0I5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.logo" containerData="2000" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.parts.LogoPart" label="Logo Area">
           <persistedState key="fx_layout_grab_horizontal" value="true"/>
         </children>
       </children>

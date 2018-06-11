@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UI Services
+Bundle-SymbolicName: org.insilico.ui.services
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Draeger Lab
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.insilico.ui.services
+Require-Bundle: org.eclipse.osgi;bundle-version="3.11.2",
+ org.eclipse.core.resources;bundle-version="3.11.1"
