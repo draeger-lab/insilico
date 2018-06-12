@@ -38,8 +38,7 @@ workspace/
 
 # eclipse files
 .settings/
-.project
+#.project
 .classpath
-.project
-.classpath
+
 
