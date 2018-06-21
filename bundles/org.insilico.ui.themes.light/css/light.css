@@ -36,13 +36,14 @@
 	-icon-inactive: 38%;
 
 	
-	
 	-fx-base: -color-base;
+	-fx-default-button: -fx-base;
 	-fx-background: -fx-base;
+	-fx-background-color: -fx-base;
 	-fx-control-inner-background: -fx-base;
 	-fx-control-inner-background-alt: -fx-base;
 	-fx-body-color: -fx-base;
-	-fx-text-inner-color: -fx-base;
+	
 	
 	/* Color of filled radio buttons, marked checkboxes, etc. */
 	-fx-mark-color: -color-accent;
@@ -57,11 +58,15 @@
     -fx-light-text-color: -text-light-primary;
     -fx-body-color: -fx-base;
     -fx-text-base-color: -text-primary;
+    -fx-text-inner-color: -text-primary;
+    /*-fx-text-fill: -text-primary;*/
 
     -fx-default-button: -fx-base;
     -fx-hover-base: -color-base-lighter;
     -fx-pressed-base: -color-base-darker;
     -fx-text-background-color: -text-primary;
+    -fx-prompt-text-fill: -text-primary;
+    -fx-highlight-text-fill: -text-primary;
     
     -fx-box-border: -color-divider;
     -fx-text-box-border: -color-divider;
@@ -91,14 +96,16 @@
 	-fx-dark-text-color: -text-dark-primary;
 	-fx-mid-text-color: -text-primary;
 	-fx-light-text-color: -text-light-primary;
-	-fx-text-background-color: -text-primary;
+	-fx-prompt-text-fill: -text-primary;
+    -fx-highlight-text-fill: -text-primary;
 }
 
 .secondary-text {
 	-fx-dark-text-color: -text-dark-secondary;
 	-fx-mid-text-color: -text-secondary;
 	-fx-light-text-color: -text-light-secondary;
-	-fx-text-background-color: -text-secondary;
+	-fx-prompt-text-fill: -text-secondary;
+    -fx-highlight-text-fill: -text-secondary;
 }
 
 .darker {
@@ -266,7 +273,6 @@
 .split-pane:focused {
     -fx-background-color: inherit;
 }
-
 
 
 /*******************************************************************************

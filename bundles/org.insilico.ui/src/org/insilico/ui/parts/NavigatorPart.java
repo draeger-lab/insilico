@@ -1,11 +1,16 @@
 package org.insilico.ui.parts;
 
 import java.nio.file.Paths;
+import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
 import org.eclipse.core.resources.IProject;
+import org.eclipse.e4.ui.model.application.ui.basic.MPart;
+import org.eclipse.e4.ui.model.application.ui.menu.MPopupMenu;
+import org.eclipse.e4.ui.services.EMenuService;
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.fx.code.editor.services.EditorOpener;
 import org.eclipse.fx.core.log.Log;
 import org.eclipse.fx.core.log.Logger;
@@ -15,6 +20,7 @@ import org.eclipse.fx.ui.controls.filesystem.ResourceItem;
 import org.eclipse.fx.ui.controls.filesystem.ResourceTreeView;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.scene.layout.BorderPane;
 
 public class NavigatorPart {
@@ -26,13 +32,37 @@ public class NavigatorPart {
     @Inject
     EditorOpener textEditorOpener;
 
+    @Inject
+    ESelectionService selectionService;
+
     @PostConstruct
-    void init(BorderPane p, IProject project) {
+    void init(BorderPane p, IProject project, MPart part, EMenuService ms) {
         ResourceTreeView viewer = new ResourceTreeView();
         viewer.setRootDirectories(FXCollections.observableArrayList(
                 ResourceItem.createObservedPath(Paths.get(project.getLocationURI()))));
         viewer.addEventHandler(ResourceEvent.openResourceEvent(), this::handleEvent);
         p.setCenter(viewer);
+        
+        // Observe Selection
+        viewer.getSelectedItems().addListener(new ListChangeListener<ResourceItem>() {
+            @Override
+            public void onChanged(Change<? extends ResourceItem> c) {
+                selectionService.setSelection(viewer.getSelectedItems().
+                        stream().
+                        // Map ResourceItem to IResource handle.
+                        map(item -> { return project.findMember(item.getUri().replaceAll("file:" + project.getLocation().toOSString() + "/", ""));}).
+                        filter(res -> { return res != null;}).
+                        collect(Collectors.toList()));
+                
+            }
+        });
+
+        // Register Context Menu
+        part.getMenus().forEach(menu -> {
+            if (menu instanceof MPopupMenu) {
+                ms.registerContextMenu(viewer, menu.getElementId());
+            }
+        });
     }
 
     private void handleEvent(ResourceEvent<ResourceItem> e) {

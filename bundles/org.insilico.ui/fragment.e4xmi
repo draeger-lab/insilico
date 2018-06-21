@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
-<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_w1COYDX7EeiVUI7ukjRSGA">
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_w1COYDX7EeiVUI7ukjRSGA">
   <imports xsi:type="commands:Command" xmi:id="__4ZcUGGfEeiFLKNi0Omi7w" elementId="org.insilico.core.command.file.move"/>
   <imports xsi:type="commands:Category" xmi:id="_svvLkGGuEeiFPq5DvKv2Yw" elementId="org.insilico.core.category.project"/>
+  <imports xsi:type="commands:Category" xmi:id="_ELZXYG4pEeiodukIVOg_GA" elementId="org.insilico.core.category.file"/>
+  <imports xsi:type="commands:Category" xmi:id="_5NXToHL2Eei4d7vMJ5D9CA" elementId="org.insilico.core.category.edit"/>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_FMfPsDX8EeiVUI7ukjRSGA" featurename="snippets" parentElementId="org.insilico.core.application">
     <elements xsi:type="basic:TrimmedWindow" xmi:id="_0GbRMDX8EeiVUI7ukjRSGA" elementId="org.insilico.ui.window" label="InSilico - Project" width="800" height="600">
       <tags>efx-center-on-screen</tags>
@@ -9,12 +11,26 @@
         <children xsi:type="advanced:Perspective" xmi:id="_gvGx4EPLEeiWeNpI5yJV_g" elementId="org.insilico.ui.perspective.default" label="Default">
           <children xsi:type="basic:PartSashContainer" xmi:id="_49qDkDd1EeiaNeAKod3z1w" elementId="org.insilico.ui.sash.0" horizontal="true">
             <persistedState key="fx_layout_grab_vertical" value="true"/>
-            <children xsi:type="basic:PartStack" xmi:id="_7wCroDd1EeiaNeAKod3z1w" elementId="org.insilico.ui.stack.nav.primary" containerData="3000">
+            <children xsi:type="basic:PartStack" xmi:id="_7wCroDd1EeiaNeAKod3z1w" elementId="org.insilico.ui.stack.nav.primary" containerData="1000">
               <tags>fx_scrollable</tags>
               <tags>org.eclipse.e4.primaryNavigationStack</tags>
-              <children xsi:type="basic:Part" xmi:id="_6QAcQDd1EeiaNeAKod3z1w" elementId="org.insilico.ui.part.navigator" containerData="2" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.parts.NavigatorPart" label="Navigator"/>
+              <children xsi:type="basic:Part" xmi:id="_6QAcQDd1EeiaNeAKod3z1w" elementId="org.insilico.ui.part.navigator" containerData="2" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.parts.NavigatorPart" label="Navigator">
+                <menus xsi:type="menu:PopupMenu" xmi:id="_u8uSEHJ5Eei4d7vMJ5D9CA" elementId="org.insilico.ui.popupmenu.contextmenu" label="Context Menu">
+                  <children xsi:type="menu:Menu" xmi:id="_23VYMHJ5Eei4d7vMJ5D9CA" elementId="org.insilico.ui.menu.createproject" label="Create Project...">
+                    <children xsi:type="menu:HandledMenuItem" xmi:id="_j57NMHLgEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.emptyproject" label="Empty Project" tooltip="Creates a empty project"/>
+                  </children>
+                  <children xsi:type="menu:Menu" xmi:id="_xmM1wHJ5Eei4d7vMJ5D9CA" elementId="org.insilico.ui.menu.createfile" label="Create File...">
+                    <children xsi:type="menu:HandledMenuItem" xmi:id="_b9PqgHLgEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.textfile" label="Empty File" tooltip="Creates a empty file" command="_0gk-UHNMEei4d7vMJ5D9CA"/>
+                  </children>
+                  <children xsi:type="menu:HandledMenuItem" xmi:id="_zsa7YHJ5Eei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.createdirectory" label="Create Directory" tooltip="Creates a directory"/>
+                  <children xsi:type="menu:MenuSeparator" xmi:id="_fvvhMHLfEei4d7vMJ5D9CA" elementId="org.insilico.ui.menuseparator.1"/>
+                  <children xsi:type="menu:HandledMenuItem" xmi:id="_147l4HLfEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.delete" label="Delete" tooltip="Delete the selected item" command="_utbT8HNMEei4d7vMJ5D9CA"/>
+                  <children xsi:type="menu:HandledMenuItem" xmi:id="_-FOR4HLfEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.rename" label="Rename" tooltip="Rename the selected item"/>
+                  <children xsi:type="menu:HandledMenuItem" xmi:id="__e9E8HLfEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.move" label="Move" tooltip="Move the selected item" command="_03VHgHL2Eei4d7vMJ5D9CA"/>
+                </menus>
+              </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_6I0aoGGwEeiFPq5DvKv2Yw" elementId="org.insilico.ui.sash.1" containerData="7000">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_6I0aoGGwEeiFPq5DvKv2Yw" elementId="org.insilico.ui.sash.1" containerData="4000">
               <children xsi:type="basic:PartSashContainer" xmi:id="_3H5nUGGwEeiFPq5DvKv2Yw" elementId="org.insilico.ui.sash.2" containerData="3000" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_snXdQGGvEeiFPq5DvKv2Yw" elementId="org.insilico.ui.area.editors" containerData="3000" ref="_GCzF4GGcEeiFLKNi0Omi7w"/>
                 <children xsi:type="basic:PartStack" xmi:id="_EoznkGGxEeiFPq5DvKv2Yw" elementId="org.insilico.ui.partstack.0" containerData="1000">
@@ -60,9 +76,17 @@
     <elements xsi:type="commands:Command" xmi:id="_lybxsDX9EeiVUI7ukjRSGA" elementId="org.insilico.ui.command.project.open" commandName="Open Project Window" description="Opens a window whcih displays the content of the given project." category="_svvLkGGuEeiFPq5DvKv2Yw">
       <parameters xmi:id="_RRhAUEO8EeiWeNpI5yJV_g" elementId="org.insilico.ui.parameter.project" name="Project" optional="false"/>
     </elements>
+    <elements xsi:type="commands:Command" xmi:id="_5-68UG4oEeiodukIVOg_GA" elementId="org.insilico.ui.command.file.save" commandName="Save File" description="Saves the selected file" category="_ELZXYG4pEeiodukIVOg_GA"/>
+    <elements xsi:type="commands:Command" xmi:id="_03VHgHL2Eei4d7vMJ5D9CA" elementId="org.insilico.ui.command.showmovedialog" commandName="Show Move Dialog" description="Shows a dialog which asks for the new location" category="_5NXToHL2Eei4d7vMJ5D9CA"/>
+    <elements xsi:type="commands:Command" xmi:id="_utbT8HNMEei4d7vMJ5D9CA" elementId="org.insilico.ui.command.showdeletedialog" commandName="Show Delete Dialog"/>
+    <elements xsi:type="commands:Command" xmi:id="_0gk-UHNMEei4d7vMJ5D9CA" elementId="org.insilico.ui.command.shownewfiledialog" commandName="Show New File Dialog"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_M3ZToDYBEeiVUI7ukjRSGA" featurename="handlers" parentElementId="org.insilico.core.application">
     <elements xsi:type="commands:Handler" xmi:id="_P8cZADYBEeiVUI7ukjRSGA" elementId="org.insilico.ui.handler.project.open" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.OpenProjectWindowHandler" command="_lybxsDX9EeiVUI7ukjRSGA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_16nZYG4oEeiodukIVOg_GA" elementId="org.insilico.ui.handler.file.save" contributionURI="bundleclass://org.eclipse.fx.code.editor.e4/org.eclipse.fx.code.editor.e4.handlers.SaveFile" command="_5-68UG4oEeiodukIVOg_GA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_Bur0cHL3Eei4d7vMJ5D9CA" elementId="org.insilico.ui.handler.0" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.ShowMoveDialogHandler" command="_03VHgHL2Eei4d7vMJ5D9CA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_uI2AMHNMEei4d7vMJ5D9CA" elementId="org.insilico.ui.handler.1" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.ShowDeleteDialogHandler" command="_utbT8HNMEei4d7vMJ5D9CA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_2KgwkHNMEei4d7vMJ5D9CA" elementId="org.insilico.ui.handler.2" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.ShowNewFileDialogHandler" command="_0gk-UHNMEei4d7vMJ5D9CA"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_R_GL4ElKEeieS42OoRLPHw" featurename="children" parentElementId="org.insilico.core.application">
     <elements xsi:type="basic:Window" xmi:id="_N4xJsEI5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.window" label="InSilico Launcher" width="600" height="400">
@@ -77,5 +101,10 @@
         </children>
       </children>
     </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_t6lAsG4oEeiodukIVOg_GA" featurename="addons" parentElementId="org.insilico.core.application">
+    <elements xsi:type="application:Addon" xmi:id="_vPCSMG4oEeiodukIVOg_GA" elementId="org.eclipse.fx.code.editor.e4.addons.DirtyStateTrackingAddon" contributionURI="bundleclass://org.eclipse.fx.code.editor.e4/org.eclipse.fx.code.editor.e4.addons.DirtyStateTrackingAddon"/>
+    <elements xsi:type="application:Addon" xmi:id="_6CpwIHLmEei4d7vMJ5D9CA" elementId="org.eclipse.fx.ui.workbench.renderers.base.addons.DnDAddon" contributionURI="bundleclass://org.eclipse.fx.ui.workbench.renderers.base/org.eclipse.fx.ui.workbench.renderers.base.addons.DnDAddon"/>
+    <elements xsi:type="application:Addon" xmi:id="_rLVhIHLnEei4d7vMJ5D9CA" elementId="org.eclipse.fx.ui.workbench.renderers.base.addons.MinMaxAddon" contributionURI="bundleclass://org.eclipse.fx.ui.workbench.renderers.base/org.eclipse.fx.ui.workbench.renderers.base.addons.MinMaxAddon"/>
   </fragments>
 </fragment:ModelFragments>

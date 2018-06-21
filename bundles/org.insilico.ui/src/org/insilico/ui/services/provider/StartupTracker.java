@@ -33,6 +33,7 @@ public class StartupTracker implements StartupProgressTrackerService {
                     try {
                         FrameworkUtil.getBundle(StartupTracker.class).getBundleContext()
                                 .getBundle(0).stop();
+                        javafx.application.Platform.exit();
                         // EclipseStarter.shutdown();
                     }
                     catch (Exception e) {
