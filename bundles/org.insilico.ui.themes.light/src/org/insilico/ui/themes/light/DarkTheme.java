@@ -4,22 +4,21 @@ import org.eclipse.fx.ui.services.theme.MultiURLStylesheet;
 import org.eclipse.fx.ui.services.theme.Stylesheet;
 import org.eclipse.fx.ui.services.theme.Theme;
 import org.eclipse.fx.ui.theme.AbstractTheme;
-import org.osgi.framework.Constants;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.component.annotations.ReferenceCardinality;
 import org.osgi.service.component.annotations.ReferencePolicy;
 
-@Component(service = Theme.class, name="light_theme",property= {Constants.SERVICE_RANKING + ":Integer=1"})
-public class LightTheme extends AbstractTheme {
-    public static final String ID = "org.insilico.ui.themes.light";
+@Component(service = Theme.class, name = "dark_theme")
+public class DarkTheme extends AbstractTheme {
+    public static final String ID = "org.insilico.ui.themes.dark";
 
-    public LightTheme() {
-        super(LightTheme.ID, "Light Theme",
-                LightTheme.class.getClassLoader().getResource("css/light.css"));
+    public DarkTheme() {
+        super(DarkTheme.ID, "Dark Theme",
+                DarkTheme.class.getClassLoader().getResource("css/dark.css"));
     }
 
-    
+ 
     @Override
     @Reference(cardinality = ReferenceCardinality.MULTIPLE, policy = ReferencePolicy.DYNAMIC)
     public void registerStylesheet(Stylesheet stylesheet) {

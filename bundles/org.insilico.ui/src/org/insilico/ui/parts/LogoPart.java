@@ -43,6 +43,7 @@ public class LogoPart {
         label.setAlignment(Pos.CENTER);
         label.setTextAlignment(TextAlignment.CENTER);
         label.getStyleClass().add("font-display-2");
+        label.requestFocus();
         parent.setCenter(label);
 
         Button b = new Button("Create New");

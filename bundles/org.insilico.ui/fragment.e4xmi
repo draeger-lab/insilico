@@ -50,15 +50,19 @@
       <variables>activeInput</variables>
       <mainMenu xmi:id="_3nW7wElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.main">
         <persistedState key="fx.menubar.native" value="true"/>
-        <children xsi:type="menu:Menu" xmi:id="_4rqRYElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.file" label="&amp;File">
+        <children xsi:type="menu:Menu" xmi:id="_4rqRYElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.file" label="File">
           <children xsi:type="menu:Menu" xmi:id="_X91dMGGeEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file.new" label="&amp;New"/>
           <children xsi:type="menu:MenuSeparator" xmi:id="_3gXaYGGfEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file.seperator.0"/>
           <children xsi:type="menu:HandledMenuItem" xmi:id="_260dUGGfEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file.move" label="Move..." tooltip="Moves the selected item." command="__4ZcUGGfEeiFLKNi0Omi7w"/>
         </children>
-        <children xsi:type="menu:Menu" xmi:id="_5445gElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.edit" label="&amp;Edit"/>
-        <children xsi:type="menu:Menu" xmi:id="_uQg0EE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.project" label="&amp;Project"/>
-        <children xsi:type="menu:Menu" xmi:id="_qAJLEE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.view" label="&amp;View"/>
-        <children xsi:type="menu:Menu" xmi:id="_reVAUE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.help" label="&amp;Help"/>
+        <children xsi:type="menu:Menu" xmi:id="_5445gElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.edit" label="Edit"/>
+        <children xsi:type="menu:Menu" xmi:id="_uQg0EE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.project" label="Project"/>
+        <children xsi:type="menu:Menu" xmi:id="_qAJLEE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.view" label="View">
+          <children xsi:type="menu:Menu" xmi:id="_LsiowHlaEeiIqJpr9BsTSw" elementId="org.insilico.ui.menu.theme" label="Theme">
+            <children xsi:type="menu:DynamicMenuContribution" xmi:id="_Ohif8HlaEeiIqJpr9BsTSw" elementId="org.insilico.ui.dynamicmenucontribution.0" label="Themes Menu" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.menus.ThemesMenu"/>
+          </children>
+        </children>
+        <children xsi:type="menu:Menu" xmi:id="_reVAUE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.help" label="Help"/>
       </mainMenu>
       <sharedElements xsi:type="advanced:Area" xmi:id="_GCzF4GGcEeiFLKNi0Omi7w" elementId="org.insilico.ui.area.editors" containerData="8000" selectedElement="_9cLX4E4fEeixccH-uztkrw" label="Editor Area">
         <children xsi:type="basic:PartStack" xmi:id="_9cLX4E4fEeixccH-uztkrw" elementId="org.insilico.ui.stack.editors" containerData="8000">
@@ -91,7 +95,7 @@
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_R_GL4ElKEeieS42OoRLPHw" featurename="children" parentElementId="org.insilico.core.application">
     <elements xsi:type="basic:Window" xmi:id="_N4xJsEI5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.window" label="InSilico Launcher" width="600" height="400">
       <tags>efx-center-on-screen</tags>
-      <children xsi:type="basic:PartSashContainer" xmi:id="_N4xJsUI5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.sash" horizontal="true">
+      <children xsi:type="basic:PartSashContainer" xmi:id="_N4xJsUI5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.sash" selectedElement="_N4xJs0I5EeiFffabvctJGg" horizontal="true">
         <tags>fx_fixedLayout</tags>
         <children xsi:type="basic:Part" xmi:id="_N4xJskI5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.projects" containerData="1000" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.parts.ProjectListPart" label="Project List">
           <persistedState key="fx_layout_grab_horizontal&#x9;" value="true"/>

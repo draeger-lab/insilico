@@ -17,18 +17,18 @@
 	-fx-text-background-color: -text-primary;
 	
 	/* Base colors of the theme. Used as background colors. */
-	-color-base-ligther: #FFFFFF;
-	-color-base: #FAFAFA;
-	-color-base-darker: #EEEEEE;
+	-color-base-ligther: #555555;
+	-color-base: #434343;
+	-color-base-darker: #262626;
 	
 	
 	/* Color for divider elements like borders. */
-	-color-divider: rgba(0, 0, 0, 0.12);
+	-color-divider: rgba(255, 255, 255, 0.12);
 	
 	/* Accent color to selections or interactive elements. */
-	-color-accent-lighter: #26A69A;
-	-color-accent: #009688;
-	-color-accent-darker: #00897B;
+	-color-accent-lighter: #0288D1;
+	-color-accent: #0277BD;
+	-color-accent-darker: #01579B;
 	
 	
 	-icon-focused:  87%;

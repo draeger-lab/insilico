@@ -2,6 +2,7 @@
 target/
 *.lock
 *.bin
+.gradle/
 
 # Mac
 .DS_Store

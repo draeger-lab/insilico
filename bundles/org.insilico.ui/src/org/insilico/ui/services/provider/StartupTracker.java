@@ -2,10 +2,11 @@ package org.insilico.ui.services.provider;
 
 import org.eclipse.fx.core.app.ApplicationContext;
 import org.eclipse.fx.ui.services.startup.StartupProgressTrackerService;
+import org.osgi.framework.Constants;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.service.component.annotations.Component;
 
-@Component
+@Component(service = StartupProgressTrackerService.class, property= {Constants.SERVICE_RANKING + ":Integer=1"})
 public class StartupTracker implements StartupProgressTrackerService {
 
     @Override
@@ -33,8 +34,9 @@ public class StartupTracker implements StartupProgressTrackerService {
                     try {
                         FrameworkUtil.getBundle(StartupTracker.class).getBundleContext()
                                 .getBundle(0).stop();
+                       
                         javafx.application.Platform.exit();
-                        // EclipseStarter.shutdown();
+                        System.exit(0);
                     }
                     catch (Exception e) {
                         e.printStackTrace();
