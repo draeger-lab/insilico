@@ -12,10 +12,14 @@ import org.eclipse.e4.ui.model.application.ui.basic.MPart;
 import org.insilico.core.handlers.CreateProjectHandler;
 import org.insilico.ui.handlers.OpenProjectWindowHandler;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
@@ -30,7 +34,6 @@ public class LogoPart {
     MPart part;
 
 
-
     @PostConstruct
     void init(BorderPane parent, Stage primaryStage) {
         // Setup window
@@ -39,12 +42,18 @@ public class LogoPart {
         parent.setStyle("-fx-border-color: -color-divider;\n" + "-fx-border-width: 0 0 0 1px;\n"
                 + "-fx-border-style: solid;\n");
 
+      
         Label label = new Label("InSilico");
         label.setAlignment(Pos.CENTER);
         label.setTextAlignment(TextAlignment.CENTER);
         label.getStyleClass().add("font-display-2");
         label.requestFocus();
-        parent.setCenter(label);
+
+        ImageView logo = new ImageView(new Image(this.getClass().getClassLoader().getResourceAsStream("res/insilico_square_color_128.png")));
+        
+        VBox box = new VBox(12.0, logo, label);
+        box.setPadding(new Insets(80.0, 100.0, 0.0, 100.0));
+        parent.setCenter(box);
 
         Button b = new Button("Create New");
         b.setOnAction(e -> {

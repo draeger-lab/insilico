@@ -41,15 +41,20 @@ public class ThemesMenu {
     @Inject
     ThemeManager themeManager;
     
+    //MDynamicMenuContribution model;
+    
+    /*
+    @Inject
+    public ThemesMenu(MDynamicMenuContribution model) {
+        this.model = model;
+    }*/
+    
     
     @PostConstruct
     void init(MMenu parent, EModelService ms) {
         Bundle b = FrameworkUtil.getBundle(ThemesMenu.class);
         BundleContext ctx = b.getBundleContext();
-        
-        // BUGFIX: If MMenuContribution is in the model tree when the window should be closed it will cause a NPE.
-        parent.getChildren().removeAll(parent.getChildren());
-        
+
         try {
             Collection<ServiceReference<Theme>> themes = ctx.getServiceReferences(Theme.class, null);
             

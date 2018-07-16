@@ -17,15 +17,15 @@
               <children xsi:type="basic:Part" xmi:id="_6QAcQDd1EeiaNeAKod3z1w" elementId="org.insilico.ui.part.navigator" containerData="2" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.parts.NavigatorPart" label="Navigator">
                 <menus xsi:type="menu:PopupMenu" xmi:id="_u8uSEHJ5Eei4d7vMJ5D9CA" elementId="org.insilico.ui.popupmenu.contextmenu" label="Context Menu">
                   <children xsi:type="menu:Menu" xmi:id="_23VYMHJ5Eei4d7vMJ5D9CA" elementId="org.insilico.ui.menu.createproject" label="Create Project...">
-                    <children xsi:type="menu:HandledMenuItem" xmi:id="_j57NMHLgEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.emptyproject" label="Empty Project" tooltip="Creates a empty project"/>
+                    <children xsi:type="menu:HandledMenuItem" xmi:id="_j57NMHLgEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.emptyproject" label="Empty Project" tooltip="Creates a empty project" command="_0gk-UHNMEei4d7vMJ5D9CA"/>
                   </children>
                   <children xsi:type="menu:Menu" xmi:id="_xmM1wHJ5Eei4d7vMJ5D9CA" elementId="org.insilico.ui.menu.createfile" label="Create File...">
                     <children xsi:type="menu:HandledMenuItem" xmi:id="_b9PqgHLgEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.textfile" label="Empty File" tooltip="Creates a empty file" command="_0gk-UHNMEei4d7vMJ5D9CA"/>
                   </children>
-                  <children xsi:type="menu:HandledMenuItem" xmi:id="_zsa7YHJ5Eei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.createdirectory" label="Create Directory" tooltip="Creates a directory"/>
+                  <children xsi:type="menu:HandledMenuItem" xmi:id="_zsa7YHJ5Eei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.createdirectory" label="Create Directory" tooltip="Creates a directory" command="_0gk-UHNMEei4d7vMJ5D9CA"/>
                   <children xsi:type="menu:MenuSeparator" xmi:id="_fvvhMHLfEei4d7vMJ5D9CA" elementId="org.insilico.ui.menuseparator.1"/>
                   <children xsi:type="menu:HandledMenuItem" xmi:id="_147l4HLfEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.delete" label="Delete" tooltip="Delete the selected item" command="_utbT8HNMEei4d7vMJ5D9CA"/>
-                  <children xsi:type="menu:HandledMenuItem" xmi:id="_-FOR4HLfEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.rename" label="Rename" tooltip="Rename the selected item"/>
+                  <children xsi:type="menu:HandledMenuItem" xmi:id="_-FOR4HLfEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.rename" label="Rename" tooltip="Rename the selected item" command="_03VHgHL2Eei4d7vMJ5D9CA"/>
                   <children xsi:type="menu:HandledMenuItem" xmi:id="__e9E8HLfEei4d7vMJ5D9CA" elementId="org.insilico.ui.handledmenuitem.move" label="Move" tooltip="Move the selected item" command="_03VHgHL2Eei4d7vMJ5D9CA"/>
                 </menus>
               </children>
