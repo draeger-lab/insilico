@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmi:id="_fa6nYRS-Eeii2_x8mUNL6A" elementId="org.insilico.core.application" bindingContexts="_fa6nYBS-Eeii2_x8mUNL6A">
+  <handlers xmi:id="_R7ZhYEIoEeiFffabvctJGg" elementId="org.insilico.core.handler.project.create" contributionURI="bundleclass://org.insilico.core/org.insilico.core.handlers.CreateProjectHandler" command="_c9r4MEIqEeiFffabvctJGg"/>
+  <handlers xmi:id="_eV0ssGEfEeiFLKNi0Omi7w" elementId="org.insilico.core.handler.file.move" command="_QvxJcGGdEeiFLKNi0Omi7w"/>
+  <handlers xmi:id="_fhrkMHIoEei4d7vMJ5D9CA" elementId="org.insilico.core.handler.0" contributionURI="bundleclass://org.insilico.core/org.insilico.core.handlers.CreateEmptyFileHandler" command="_iNWgQHIoEei4d7vMJ5D9CA"/>
+  <rootContext xmi:id="_fa6nYBS-Eeii2_x8mUNL6A" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_fa6nYhS-Eeii2_x8mUNL6A" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_fa6nYxS-Eeii2_x8mUNL6A" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_c9r4MEIqEeiFffabvctJGg" elementId="org.insilico.core.command.project.create" commandName="Create Project" description="Creates a new project." category="_ru_TgGGeEeiFLKNi0Omi7w">
+    <parameters xmi:id="_iSpKsEIqEeiFffabvctJGg" elementId="org.insilico.core.parameter.location" name="Project Location" optional="false"/>
+    <parameters xmi:id="_sk4kgEO0EeiWeNpI5yJV_g" elementId="org.insilico.core.parameter.name" name="Project Name"/>
+  </commands>
+  <commands xmi:id="_QvxJcGGdEeiFLKNi0Omi7w" elementId="org.insilico.core.command.file.move" commandName="Move..." description="Move the selected item" category="_rhqeoGGdEeiFLKNi0Omi7w"/>
+  <commands xmi:id="_iNWgQHIoEei4d7vMJ5D9CA" elementId="org.insilico.core.command.createemptyfile" commandName="Create Empty File" description="Creates a empty file." category="_rhqeoGGdEeiFLKNi0Omi7w">
+    <parameters xmi:id="_UGCq4HJ2Eei4d7vMJ5D9CA" elementId="org.insilico.core.parameter.parent" name="Parent Project" optional="false"/>
+    <parameters xmi:id="_XuzhUHJ2Eei4d7vMJ5D9CA" elementId="org.insilico.core.parameter.location" name="File Location" optional="false"/>
+    <parameters xmi:id="_a6YFcHJ2Eei4d7vMJ5D9CA" elementId="org.insilico.core.parameter.progressmonitor" name="Progress Monitor"/>
+  </commands>
+  <addons xmi:id="_fa6nZBS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_fa6nZRS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_fa6nZhS-Eeii2_x8mUNL6A" elementId="org.eclipse.fx.ui.keybindings.e4.service" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon"/>
+  <addons xmi:id="_fa6nZxS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_fa6naBS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_fa6naRS-Eeii2_x8mUNL6A" elementId="org.eclipse.fx.ui.keybindings.e4.model" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon"/>
+  <addons xmi:id="_fa6nahS-Eeii2_x8mUNL6A" elementId="org.eclipse.e4.ui.workbench.addons.HandlerProcessingAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <categories xmi:id="_rhqeoGGdEeiFLKNi0Omi7w" elementId="org.insilico.core.category.file" name="File"/>
+  <categories xmi:id="_vV3wEGGdEeiFLKNi0Omi7w" elementId="org.insilico.core.category.edit" name="Edit"/>
+  <categories xmi:id="_x5KMMGGdEeiFLKNi0Omi7w" elementId="org.insilico.core.category.window" name="Window"/>
+  <categories xmi:id="_12PFwGGdEeiFLKNi0Omi7w" elementId="org.insilico.core.category.help" name="Help"/>
+  <categories xmi:id="_4mNTAGGdEeiFLKNi0Omi7w" elementId="org.insilico.core.category.navigation" name="Navigation"/>
+  <categories xmi:id="_ru_TgGGeEeiFLKNi0Omi7w" elementId="org.insilico.core.category.project" name="Project"/>
+</application:Application>

@@ -1,4 +1,4 @@
-package org.insilico.jsbml.core.editor;
+package org.insilico.testplug.editor;
 
 import java.util.Collections;
 import java.util.List;
@@ -22,8 +22,8 @@ public class DocumentTreeView {
 
     @PostConstruct
     private void init(BorderPane parent) {
-        TreeView<SBase> docTreeView = new TreeView<>(convertToTreeItem(doc, 2));        
-
+        TreeView<SBase> docTreeView = new TreeView<>(convertToTreeItem(doc, 2));
+        
         parent.setCenter(docTreeView);
     }
 
