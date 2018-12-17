@@ -13,7 +13,6 @@ import org.sbml.jsbml.SBase;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.control.TextField;
 
 public class DocumentTreeView {
 
@@ -22,7 +21,7 @@ public class DocumentTreeView {
 
     @PostConstruct
     private void init(BorderPane parent) {
-        TreeView<SBase> docTreeView = new TreeView<>(convertToTreeItem(doc, 2));        
+        TreeView<SBase> docTreeView = new TreeView<>(convertToTreeItem(doc, 2));
 
         parent.setCenter(docTreeView);
     }

@@ -23,4 +23,5 @@ public class SBMLEditorProvider implements EditorClassURLProvider {
     public String getBundleClassURI(String uri) {
         return "bundleclass://org.insilico.jsbml.core/" + DocumentTreeView.class.getName();
     }
+
 }

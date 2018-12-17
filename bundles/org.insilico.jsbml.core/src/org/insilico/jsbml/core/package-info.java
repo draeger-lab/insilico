@@ -1,5 +1,5 @@
 /**
- * <h1>JSBML core</h1>
+ * <h1>JSBML Core</h1>
  * 
  * This bundle provides basic support for the SBML core specifications.
  * 
