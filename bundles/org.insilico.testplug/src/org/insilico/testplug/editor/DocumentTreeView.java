@@ -1,5 +1,6 @@
 package org.insilico.testplug.editor;
 
+import java.awt.TextArea;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,8 +24,9 @@ public class DocumentTreeView {
     @PostConstruct
     private void init(BorderPane parent) {
         TreeView<SBase> docTreeView = new TreeView<>(convertToTreeItem(doc, 2));
+        TextField test = new TextField("das ist ein Test!");
         
-        parent.setCenter(docTreeView);
+        parent.setCenter(test);
     }
 
     private TreeItem<SBase> convertToTreeItem(SBase elem, int expandLevels) {
