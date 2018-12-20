@@ -26,7 +26,7 @@ import org.sbml.jsbml.SBMLDocument;
  * In oder to use this {@link IContextFunction} the context must store the location of a sbml file
  * with the key {@link org.eclipse.fx.code.editor.Constants#DOCUMENT_URL}. This context function
  * will only compute values for the contextKey
- * {@link org.insilico.jsbml.core.Constants#KEY_SBML_DOCUMENT}
+ * {@link org.insilico.testplug.Constants#KEY_SBML_DOCUMENT}
  * 
  * @author roman
  *
@@ -41,6 +41,7 @@ public class SBMLDocumentLoader extends ContextFunction {
     @Override
     public Object compute(IEclipseContext context, String contextKey) {
         System.out.println("Compute...");
+        System.out.println("Hallo");
         Object urlVal = context.get(DOCUMENT_URL);
 
         if (urlVal == null) {

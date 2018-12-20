@@ -1,4 +1,4 @@
-package org.insilico.tetsplug.services.provider;
+package org.insilico.testplug.services.provider;
 
 import org.eclipse.fx.code.editor.services.FileIconProvider;
 import org.osgi.framework.Bundle;

@@ -16,8 +16,8 @@
 
 	<modules>
 		<module>org.insilico.core.feature</module>
-		<module>org.insilico.jsbml.feature</module>
 		<module>org.insilico.testplug.feature</module>
+		<module>org.insilico.jsbml.feature</module>
 		<module>org.insilico.ui.feature</module>
 	</modules>
 </project>

@@ -18,7 +18,7 @@
 		<module>org.insilico.ui</module>
 		<module>org.insilico.ui.components</module>
 		<module>org.insilico.ui.themes.light</module>
-		<module>org.insilico.jsbml.core</module>
 		<module>org.insilico.testplug</module>
+		<module>org.insilico.jsbml.core</module>
 	</modules>
 </project>

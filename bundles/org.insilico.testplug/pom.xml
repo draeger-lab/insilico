@@ -11,7 +11,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>org.insilico.testplug</artifactId>
   <packaging>eclipse-plugin</packaging>
-  <name> testplug</name>
+  <name>testplug</name>
 
   <build>
     <sourceDirectory>src</sourceDirectory>
