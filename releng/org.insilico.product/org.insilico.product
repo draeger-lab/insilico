@@ -11,6 +11,7 @@
       <programArgs>-nosplash
 -clearPersistedState
 -data @user.home/InSilico
+-console
       </programArgs>
       <vmArgs>-Dorg.osgi.framework.bundle.parent=ext
 -Dorg.osgi.required.JavaVersion=1.8
@@ -51,13 +52,18 @@
    </features>
 
    <configurations>
+      <plugin id="org.apache.felix.gogo.command" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.felix.gogo.runtime" autoStart="false" startLevel="0" />
+      <plugin id="org.apache.felix.gogo.shell" autoStart="false" startLevel="0" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.console" autoStart="false" startLevel="0" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.fx.ui.workbench.fx" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
+      <plugin id="org.eclipse.osgi" autoStart="true" startLevel="1" />
+      <plugin id="org.insilico.testplug" autoStart="false" startLevel="1" />
       <property name="osgi.instance.area.default" value="@user.home/InSilico" />
    </configurations>
 
