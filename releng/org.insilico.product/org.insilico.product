@@ -48,7 +48,7 @@
       <feature id="org.insilico.core.feature" version="1.0.0.qualifier"/>
       <feature id="org.insilico.jsbml.feature" version="1.0.0.qualifier"/>
       <feature id="org.insilico.ui.feature" version="1.0.0.qualifier"/>
-      <feature id="org.insilico.testplug.feature" version="1.0.0.qualifier"/>
+      <feature id="org.insilico.sbmlsheets.feature" version="1.0.0.qualifier"/>
    </features>
 
    <configurations>
@@ -63,7 +63,7 @@
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.fx.ui.workbench.fx" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="1" />
-      <plugin id="org.insilico.testplug" autoStart="false" startLevel="1" />
+      <plugin id="org.insilico.sbmlsheets" autoStart="false" startLevel="1" />
       <property name="osgi.instance.area.default" value="@user.home/InSilico" />
    </configurations>
 
