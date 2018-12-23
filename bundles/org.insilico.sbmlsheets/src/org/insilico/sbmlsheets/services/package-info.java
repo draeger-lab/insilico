@@ -3,7 +3,7 @@
  * library.
  * 
  * @author robert
- * @see org.insilico.sbmlsheets
+ * @see org.insilico.sbmlsheets.core
  * @see org.sbml.jsbml
  *
  */

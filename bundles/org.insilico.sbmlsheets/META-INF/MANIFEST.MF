@@ -15,8 +15,10 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Service-Component: OSGI-INF/services/org.insilico.sbmlsheets.services.provider.SBMLEditorProvider.xml,
  OSGI-INF/services/org.insilico.sbmlsheets.services.provider.SBMLIconProvider.xml,
- OSGI-INF/services/org.insilico.sbmlsheets.services.provider.SBMLDocumentLoader.xml
-Export-Package: org.insilico.sbmlsheets,
+ OSGI-INF/services/org.insilico.sbmlsheets.services.provider.SBMLDocumentLoader.xml,
+  OSGI-INF/services/org.insilico.sbmlsheets.services.provider.SpreadsheetEditorProvider.xml,
+ OSGI-INF/services/org.insilico.sbmlsheets.services.provider.SpreadsheetDocumentLoader.xml
+Export-Package: org.insilico.sbmlsheets.core,
  org.insilico.sbmlsheets.editor,
  org.insilico.sbmlsheets.services,
  org.insilico.sbmlsheets.services.provider

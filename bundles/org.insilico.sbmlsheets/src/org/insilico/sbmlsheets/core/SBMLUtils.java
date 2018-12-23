@@ -1,4 +1,4 @@
-package org.insilico.sbmlsheets;
+package org.insilico.sbmlsheets.core;
 
 /**
  * Util class for JSBML.

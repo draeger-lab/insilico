@@ -5,4 +5,4 @@
  * 
  * @see org.sbml.jsbml
  */
-package org.insilico.sbmlsheets;
+package org.insilico.sbmlsheets.core;
