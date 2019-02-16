@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="insilicolab" sequenceNumber="21">
+<?pde version="3.8"?>
+<target name="insilicolab" sequenceNumber="21">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="org.hamcrest" version="1.1.0.v20090501071000"/>
@@ -14,9 +15,14 @@
 </location>
 <location path="${project_loc:org.insilico.target}/../org.insilico.maven.dependencies/target/repository" type="Profile"/>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.fx.code.target.feature.feature.group" version="3.0.0.201706050601"/>
-<unit id="org.eclipse.fx.target.feature.feature.group" version="3.0.0.201706050601"/>
-<repository location="http://download.eclipse.org/efxclipse/runtime-released/3.0.0/site"/>
+<unit id="org.eclipse.fx.code.target.feature.feature.group" version="3.4.1.201810030600"/>
+<unit id="org.eclipse.fx.nl.feature.feature.group" version="3.4.1.201810030600"/>
+<unit id="org.eclipse.fx.runtime.min.feature.feature.group" version="3.4.1.201810030500"/>
+<unit id="org.eclipse.fx.slf4j.target.feature.feature.group" version="3.4.1.201810020600"/>
+<unit id="org.eclipse.fx.target.feature.feature.group" version="3.4.1.201810030600"/>
+<unit id="org.eclipse.fx.target.rcp.feature.feature.group" version="3.4.1.201810030600"/>
+<unit id="org.eclipse.fx.target.rcp4.feature.feature.group" version="3.4.1.201810030600"/>
+<repository location="http://download.eclipse.org/efxclipse/runtime-released/3.4.1/site"/>
 </location>
 </locations>
 </target>

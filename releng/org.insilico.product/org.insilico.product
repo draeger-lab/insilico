@@ -38,8 +38,8 @@
 
    <features>
       <feature id="org.eclipse.fx.runtime.e4fx.feature"/>
-      <feature id="org.eclipse.fx.code.base.feature" version="3.0.0.201706050601"/>
-      <feature id="org.eclipse.fx.code.langs.feature" version="3.0.0.201706050601"/>
+      <feature id="org.eclipse.fx.code.base.feature" version="3.4.1.201810030600"/>
+      <feature id="org.eclipse.fx.code.langs.feature" version="3.4.1.201810030600"/>
       <feature id="org.insilico.core.feature" version="1.0.0.qualifier"/>
       <feature id="org.insilico.jsbml.feature" version="1.0.0.qualifier"/>
       <feature id="org.insilico.ui.feature" version="1.0.0.qualifier"/>
