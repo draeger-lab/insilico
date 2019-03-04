@@ -12,6 +12,10 @@ import org.eclipse.core.resources.IProject;
  */
 public interface Constants {
     /**
+     * The identifier of the core inSilico bundle.
+     */
+    public static final String INSILICO_CORE_ID = "org.insilico.core";
+    /**
      * The identifier of the launcher window snippet.
      */
     public static final String LAUNCHER_WINDOW_ID = "org.insilico.ui.launcher.window";

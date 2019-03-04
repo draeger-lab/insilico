@@ -62,6 +62,10 @@
             <children xsi:type="menu:DynamicMenuContribution" xmi:id="_Ohif8HlaEeiIqJpr9BsTSw" elementId="org.insilico.ui.dynamicmenucontribution.0" label="Themes Menu" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.menus.ThemesMenu"/>
           </children>
         </children>
+        <children xsi:type="menu:Menu" xmi:id="_iOP0MDdREemQdtGBZQCrqQ" elementId="org.insilico.ui.menu.features" label="Install">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_QhomgDdnEemwxf0U6Es5Ug" elementId="org.insilico.ui.handledmenuitem.addfeature" label="Add Feature" iconURI="" tooltip="Click to add inSilico compatible Feature" command="_L7vskDd_EemCK8sus-fmBg"/>
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_qMK5sDqWEemCJbfM6IKsOA" elementId="org.insilico.ui.handledmenuitem.addnewbundle" label="Add Bundle" iconURI="" tooltip="Click to add inSilico compatible Bundle" command="_MnVAoD5YEemCJbfM6IKsOA"/>
+        </children>
         <children xsi:type="menu:Menu" xmi:id="_reVAUE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.help" label="Help"/>
       </mainMenu>
       <sharedElements xsi:type="advanced:Area" xmi:id="_GCzF4GGcEeiFLKNi0Omi7w" elementId="org.insilico.ui.area.editors" containerData="8000" selectedElement="_9cLX4E4fEeixccH-uztkrw" label="Editor Area">
@@ -84,6 +88,8 @@
     <elements xsi:type="commands:Command" xmi:id="_03VHgHL2Eei4d7vMJ5D9CA" elementId="org.insilico.ui.command.showmovedialog" commandName="Show Move Dialog" description="Shows a dialog which asks for the new location" category="_5NXToHL2Eei4d7vMJ5D9CA"/>
     <elements xsi:type="commands:Command" xmi:id="_utbT8HNMEei4d7vMJ5D9CA" elementId="org.insilico.ui.command.showdeletedialog" commandName="Show Delete Dialog"/>
     <elements xsi:type="commands:Command" xmi:id="_0gk-UHNMEei4d7vMJ5D9CA" elementId="org.insilico.ui.command.shownewfiledialog" commandName="Show New File Dialog"/>
+    <elements xsi:type="commands:Command" xmi:id="_L7vskDd_EemCK8sus-fmBg" elementId="org.insilico.ui.command.feature" commandName="Feature"/>
+    <elements xsi:type="commands:Command" xmi:id="_MnVAoD5YEemCJbfM6IKsOA" elementId="org.insilico.ui.command.bundle" commandName="Bundle"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_M3ZToDYBEeiVUI7ukjRSGA" featurename="handlers" parentElementId="org.insilico.core.application">
     <elements xsi:type="commands:Handler" xmi:id="_P8cZADYBEeiVUI7ukjRSGA" elementId="org.insilico.ui.handler.project.open" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.OpenProjectWindowHandler" command="_lybxsDX9EeiVUI7ukjRSGA"/>
@@ -91,6 +97,8 @@
     <elements xsi:type="commands:Handler" xmi:id="_Bur0cHL3Eei4d7vMJ5D9CA" elementId="org.insilico.ui.handler.0" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.ShowMoveDialogHandler" command="_03VHgHL2Eei4d7vMJ5D9CA"/>
     <elements xsi:type="commands:Handler" xmi:id="_uI2AMHNMEei4d7vMJ5D9CA" elementId="org.insilico.ui.handler.1" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.ShowDeleteDialogHandler" command="_utbT8HNMEei4d7vMJ5D9CA"/>
     <elements xsi:type="commands:Handler" xmi:id="_2KgwkHNMEei4d7vMJ5D9CA" elementId="org.insilico.ui.handler.2" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.ShowNewFileDialogHandler" command="_0gk-UHNMEei4d7vMJ5D9CA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_H0O-EDdSEemQdtGBZQCrqQ" elementId="org.insilico.ui.handler.features" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.AddFeatureHandler" command="_L7vskDd_EemCK8sus-fmBg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_YY-pwD5YEemCJbfM6IKsOA" elementId="org.insilico.ui.handler.bundle" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.AddBundleHandler" command="_MnVAoD5YEemCJbfM6IKsOA"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_R_GL4ElKEeieS42OoRLPHw" featurename="children" parentElementId="org.insilico.core.application">
     <elements xsi:type="basic:Window" xmi:id="_N4xJsEI5EeiFffabvctJGg" elementId="org.insilico.ui.launcher.window" label="InSilico Launcher" width="600" height="400">
