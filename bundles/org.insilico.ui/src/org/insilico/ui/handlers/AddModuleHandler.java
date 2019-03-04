@@ -26,6 +26,7 @@ import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.ui.workbench.IWorkbench;
 import org.insilico.ui.Constants;
 import org.insilico.ui.utils.DialogUtils;
+import org.insilico.ui.utils.Messages;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -69,8 +70,8 @@ public abstract class AddModuleHandler {
 		if (file != null) {
 			if (checkSelectedDir(file.toPath())) {
 				copyModule(file.toPath());
-				dialogUtils.showConfirmationDialog("Add Module", null,
-						"Integration process is finished. inSilico should be restarted to apply the new settings. Do you want to restart the application?",
+				dialogUtils.showConfirmationDialog(Messages.add_module, null,
+						Messages.integration_finished_restart,
 						AlertType.CONFIRMATION, (v) -> {
 							if (v) {
 								IWorkbench workbench = context.get(IWorkbench.class);
@@ -78,8 +79,8 @@ public abstract class AddModuleHandler {
 							}
 						});
 			} else {
-				dialogUtils.showConfirmationDialog("Add Module", "Integration process can not be finished",
-						"Selected folder contains uncompatible data", AlertType.ERROR);
+				dialogUtils.showConfirmationDialog(Messages.add_module, Messages.integration_failed, //$NON-NLS-1$
+						Messages.uncompatible_data, AlertType.ERROR);
 			}
 		}
 	}
@@ -88,14 +89,14 @@ public abstract class AddModuleHandler {
 	 * Get absolute path to the platform
 	 */
 	protected String getAbsolutePlatformPath() {
-		return getAbsoluteCorePluginPath().concat("../../");
+		return getAbsoluteCorePluginPath().concat("../../"); //$NON-NLS-1$
 	}
 
 	/**
 	 * Get absolute path to inSilico Core plug-in
 	 */
 	protected String getAbsoluteCorePluginPath() {
-		return Platform.getBundle(Constants.INSILICO_CORE_ID).getLocation().replace("reference:file:", "");
+		return Platform.getBundle(Constants.INSILICO_CORE_ID).getLocation().replace(Messages.reference_prefix, ""); //$NON-NLS-2$
 	}
 
 	/**
@@ -122,10 +123,10 @@ public abstract class AddModuleHandler {
 			Files.walk(src).forEach(source -> {
 				copy(source, newDest.resolve(src.relativize(source)));
 			});
-			extendPomWithModule(dest.toString().concat("/pom.xml"), src.getFileName().toString());
+			extendPomWithModule(dest.toString().concat("/pom.xml"), src.getFileName().toString()); //$NON-NLS-1$
 
 		} catch (IOException e) {
-			dialogUtils.showConfirmationDialog("Add Module", "Integration process can not be finished", e.getMessage(),
+			dialogUtils.showConfirmationDialog(Messages.add_module, Messages.integration_failed, e.getMessage(), //$NON-NLS-1$ //$NON-NLS-2$
 					AlertType.ERROR, e);
 		}
 	}
@@ -139,7 +140,7 @@ public abstract class AddModuleHandler {
 		try {
 			Files.copy(source, dest, REPLACE_EXISTING);
 		} catch (Exception e) {
-			dialogUtils.showConfirmationDialog("Add Module", "Integration process can not be finished", e.getMessage(),
+			dialogUtils.showConfirmationDialog(Messages.add_module, Messages.integration_failed, e.getMessage(), //$NON-NLS-1$ //$NON-NLS-2$
 					AlertType.ERROR, e);
 		}
 	}
@@ -155,12 +156,12 @@ public abstract class AddModuleHandler {
 			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 			Document doc = docBuilder.parse(dest);
-			Element module = doc.createElement("module");
+			Element module = doc.createElement("module"); //$NON-NLS-1$
 			module.appendChild(doc.createTextNode(moduleId));
-			doc.getElementsByTagName("modules").item(0).appendChild(module);
+			doc.getElementsByTagName("modules").item(0).appendChild(module); //$NON-NLS-1$
 			saveDocModelToFile(dest, doc);
 		} catch (Exception e) {
-			dialogUtils.showConfirmationDialog("Add Module", "Integration process can not be finished", e.getMessage(),
+			dialogUtils.showConfirmationDialog(Messages.add_module, Messages.integration_failed, e.getMessage(), //$NON-NLS-1$ //$NON-NLS-2$
 					AlertType.ERROR);
 		}
 	}
@@ -184,7 +185,7 @@ public abstract class AddModuleHandler {
 	 * Check if target module has a pom.xml file
 	 */
 	private boolean checkSelectedDir(Path target) {
-		Path pom = new File(target.toFile(), "/pom.xml").toPath();
+		Path pom = new File(target.toFile(), "/pom.xml").toPath(); //$NON-NLS-1$
 		return Files.exists(pom, NOFOLLOW_LINKS);
 	}
 }
