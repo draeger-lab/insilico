@@ -43,7 +43,7 @@
 		<repository>
 			<id>maven-dependencies</id>
 			<layout>p2</layout>
-			<url>file://${project.basedir}/../../releng/org.insilico.maven.dependencies/target/repository</url>
+			<url>file:///${project.basedir}/../../releng/org.insilico.maven.dependencies/target/repository</url>
 		</repository>
 	</repositories>
 
