@@ -12,10 +12,9 @@ import org.eclipse.e4.core.contexts.IContextFunction;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.di.IInjector;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
-import org.insilico.jsbml.core.SBMLUtils;
+import org.insilico.jsbml.core.CSVUtils;
 import org.osgi.service.component.annotations.Component;
-import org.sbml.jsbml.JSBML;
-import org.sbml.jsbml.SBMLDocument;
+import javax.swing.text.PlainDocument;
 
 
 
@@ -33,15 +32,14 @@ import org.sbml.jsbml.SBMLDocument;
  */
 @SuppressWarnings("restriction")
 @Component(service = IContextFunction.class,
-        property = {"service.context.key=org.sbml.jsbml.SBMLDocument"})
-public class SBMLDocumentLoader extends ContextFunction {
+        property = {"service.context.key=javax.swing.text.PlainDocument"})
+public class CSVDocumentLoader extends ContextFunction {
     // Stores weak reference to already loaded documents.
-    Map<String, SBMLDocument> cache = new WeakHashMap<>();
+    Map<String, PlainDocument> cache = new WeakHashMap<>();
 
     @Override
     public Object compute(IEclipseContext context, String contextKey) {
         System.out.println("Compute...");
-        System.out.println(contextKey);
         Object urlVal = context.get(DOCUMENT_URL);
 
         if (urlVal == null) {
@@ -58,21 +56,22 @@ public class SBMLDocumentLoader extends ContextFunction {
             String urlString = (String) urlVal;
             urlString = urlString.replace("%20", " ");
             // Check cache
-            SBMLDocument doc = cache.get(urlString);
+            PlainDocument doc = cache.get(urlString);
 
             if (doc == null) {
                 // Check if the document is a sbml file.
-                if (!SBMLUtils.isSBMLFile(urlString)) {
-                    System.out.println("Not a sbml file");
+                if (!CSVUtils.isCSVFile(urlString)) {
+                    System.out.println("Not a csv file");
                     return IInjector.NOT_A_VALUE;
                 }
 
                 // Load if needed
                 try {
-                    URI url = URIUtil.fromString(urlString);
-                    doc = JSBML.readSBMLFromFile(url.getPath());
+                	System.out.println("Try to read CSV file");
+                    //URI url = URIUtil.fromString(urlString);
+                    //doc = JSBML.readSBMLFromFile(url.getPath());
                     // doc = SBMLReader.read(new File(url));
-                    cache.put(urlString, doc);
+                    //cache.put(urlString, doc);
                 }
                 catch (Exception e) {
                     // Not a sbml file?
@@ -90,3 +89,4 @@ public class SBMLDocumentLoader extends ContextFunction {
     }
 
 }
+

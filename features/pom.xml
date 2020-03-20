@@ -17,6 +17,7 @@
 	<modules>
 		<module>org.insilico.core.feature</module>
 		<module>org.insilico.jsbml.feature</module>
-		<module>org.insilico.ui.feature</module>
+		<module>org.insilico.ui.feature</module>		
+		<module>org.insilico.sbmlsheets.feature</module>
 	</modules>
 </project>

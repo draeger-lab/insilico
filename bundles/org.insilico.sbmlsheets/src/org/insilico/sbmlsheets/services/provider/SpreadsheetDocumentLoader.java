@@ -1,4 +1,4 @@
-package org.insilico.jsbml.core.services.provider;
+package org.insilico.sbmlsheets.services.provider;
 
 import static org.eclipse.fx.code.editor.Constants.DOCUMENT_URL;
 
@@ -12,10 +12,10 @@ import org.eclipse.e4.core.contexts.IContextFunction;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.di.IInjector;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
-import org.insilico.jsbml.core.SBMLUtils;
+import org.insilico.sbmlsheets.core.SheetReader;
+import org.insilico.sbmlsheets.core.Spreadsheet;
+import org.insilico.sbmlsheets.core.SpreadsheetUtils;
 import org.osgi.service.component.annotations.Component;
-import org.sbml.jsbml.JSBML;
-import org.sbml.jsbml.SBMLDocument;
 
 
 
@@ -26,22 +26,22 @@ import org.sbml.jsbml.SBMLDocument;
  * In oder to use this {@link IContextFunction} the context must store the location of a sbml file
  * with the key {@link org.eclipse.fx.code.editor.Constants#DOCUMENT_URL}. This context function
  * will only compute values for the contextKey
- * {@link org.insilico.jsbml.core.Constants#KEY_SBML_DOCUMENT}
+ * {@link org.insilico.sbmlsheets.core.Constants#KEY_SBML_DOCUMENT}
  * 
  * @author roman
  *
  */
 @SuppressWarnings("restriction")
 @Component(service = IContextFunction.class,
-        property = {"service.context.key=org.sbml.jsbml.SBMLDocument"})
-public class SBMLDocumentLoader extends ContextFunction {
+        property = {"service.context.key=org.insilico.sbmlsheets.core.Spreadsheet"})
+public class SpreadsheetDocumentLoader extends ContextFunction {
     // Stores weak reference to already loaded documents.
-    Map<String, SBMLDocument> cache = new WeakHashMap<>();
+    Map<String, Spreadsheet> cache = new WeakHashMap<>();
 
     @Override
     public Object compute(IEclipseContext context, String contextKey) {
         System.out.println("Compute...");
-        System.out.println(contextKey);
+        System.out.println("blubblub");
         Object urlVal = context.get(DOCUMENT_URL);
 
         if (urlVal == null) {
@@ -58,20 +58,19 @@ public class SBMLDocumentLoader extends ContextFunction {
             String urlString = (String) urlVal;
             urlString = urlString.replace("%20", " ");
             // Check cache
-            SBMLDocument doc = cache.get(urlString);
+            Spreadsheet doc = cache.get(urlString);
 
             if (doc == null) {
                 // Check if the document is a sbml file.
-                if (!SBMLUtils.isSBMLFile(urlString)) {
-                    System.out.println("Not a sbml file");
+                if (!SpreadsheetUtils.isSheetFile(urlString)) {
+                    System.out.println("Not a Spreadsheet file");
                     return IInjector.NOT_A_VALUE;
                 }
 
                 // Load if needed
                 try {
                     URI url = URIUtil.fromString(urlString);
-                    doc = JSBML.readSBMLFromFile(url.getPath());
-                    // doc = SBMLReader.read(new File(url));
+                    doc = SheetReader.readSheetFromFile(url.getPath());
                     cache.put(urlString, doc);
                 }
                 catch (Exception e) {
@@ -88,5 +87,4 @@ public class SBMLDocumentLoader extends ContextFunction {
         System.out.println("No doc selected");
         return IInjector.NOT_A_VALUE;
     }
-
 }
