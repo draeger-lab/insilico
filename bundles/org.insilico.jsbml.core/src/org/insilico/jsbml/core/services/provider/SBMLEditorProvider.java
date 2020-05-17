@@ -12,7 +12,6 @@ import org.osgi.service.component.annotations.Component;
  *
  */
 @Component
-// @SuppressWarnings("restriction") //added by marietta 15032020
 public class SBMLEditorProvider implements EditorClassURLProvider {
 
     @Override

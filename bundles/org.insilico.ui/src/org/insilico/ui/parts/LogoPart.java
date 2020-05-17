@@ -24,7 +24,6 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
-//@SuppressWarnings("restriction") commented out by marietta 16032020
 public class LogoPart {
 
     @Inject

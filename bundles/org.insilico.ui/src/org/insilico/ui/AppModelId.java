@@ -34,5 +34,5 @@ public class AppModelId {
 	public static final String TRIMBAR_ORG_INSILICO_UI_TRIM_TOOLS = "org.insilico.ui.trim.tools";
 	public static final String TRIMMEDWINDOW_ORG_INSILICO_UI_WINDOW = "org.insilico.ui.window";
 	public static final String WINDOW_ORG_INSILICO_UI_LAUNCHER_WINDOW = "org.insilico.ui.launcher.window";
-	public static final String MENU_ORG_INSILICO_UI_MENU = "org.insilico.ui.menu"; //line added by marietta 04042020
+	public static final String MENU_ORG_INSILICO_UI_MENU = "org.insilico.ui.menu";
 }

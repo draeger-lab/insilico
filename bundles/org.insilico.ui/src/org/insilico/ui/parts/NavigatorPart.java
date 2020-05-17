@@ -24,7 +24,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.scene.layout.BorderPane;
 
-//@SuppressWarnings("restriction") //added by marietta 15032020
 public class NavigatorPart {
 
     @Inject

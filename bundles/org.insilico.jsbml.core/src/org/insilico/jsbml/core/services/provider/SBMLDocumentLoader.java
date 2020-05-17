@@ -31,7 +31,6 @@ import org.sbml.jsbml.SBMLDocument;
  * @author roman
  *
  */
-//@SuppressWarnings("restriction") commented out by marietta 16032020
 @Component(service = IContextFunction.class,
         property = {"service.context.key=org.sbml.jsbml.SBMLDocument"})
 public class SBMLDocumentLoader extends ContextFunction {

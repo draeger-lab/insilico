@@ -2,10 +2,7 @@ package org.insilico.sbmlsheets.core;
 
 import java.io.FileReader;
 import java.io.IOException;
-// import java.util.LinkedList; commented out by marietta, 15032020
 import java.util.Scanner;
-
-//addition start 15032020
 import java.util.NoSuchElementException;
 import java.util.List;
 import java.util.ArrayList;

@@ -23,7 +23,7 @@
 				</includes>
 			</resource>
 		</resources>
-		<pluginManagement> <!-- added by marietta 15032020 -->
+		<pluginManagement>
 			<plugins>
 				<plugin>
 					<groupId>org.eclipse.tycho</groupId>

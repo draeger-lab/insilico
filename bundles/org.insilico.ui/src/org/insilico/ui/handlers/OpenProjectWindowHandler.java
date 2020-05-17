@@ -27,7 +27,6 @@ import org.insilico.ui.AppModelId;
  * @author roman
  *
  */
-//@SuppressWarnings("restriction") commented out by marietta 16032020
 public class OpenProjectWindowHandler {
     @Inject
     IWorkspace ws;

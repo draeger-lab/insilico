@@ -21,7 +21,6 @@ import org.osgi.framework.ServiceReference;
 import org.sbml.jsbml.SBMLDocument;
 
 
-//@SuppressWarnings("restriction") commented out by marietta 16032020
 public class SBMLLoaderTest {
 
     private static final Bundle BUNDLE = FrameworkUtil.getBundle(SBMLLoaderTest.class);

@@ -13,7 +13,6 @@ import org.osgi.service.component.annotations.Component;
  *
  */
 @Component
-//@SuppressWarnings("restriction") commented out by marietta 16032020
 public class SBMLIconProvider implements FileIconProvider {
 
     @Override
