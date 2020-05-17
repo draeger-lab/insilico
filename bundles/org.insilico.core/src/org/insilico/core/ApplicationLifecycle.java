@@ -1,4 +1,4 @@
-package org.insilico.core;
+package org.insilico.core; 
 
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.runtime.CoreException;

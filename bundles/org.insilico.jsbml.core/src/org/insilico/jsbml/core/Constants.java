@@ -1,4 +1,4 @@
-package org.insilico.jsbml.core;
+package org.insilico.jsbml.core; 
 
 public interface Constants {
 

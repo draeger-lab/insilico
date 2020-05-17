@@ -18,6 +18,7 @@ import org.eclipse.fx.ui.services.dialog.LightWeightDialogService.ModalityScope;
 
 import javafx.scene.Node;
 
+// @SuppressWarnings("restriction") //added by marietta 15032020
 public abstract class SelectedResourceHandler {
     public abstract static class ResourceOperationDialog extends TitleAreaDialog {
         @Log
@@ -30,6 +31,7 @@ public abstract class SelectedResourceHandler {
         public ResourceOperationDialog(String operationName, String message) {
             this(null, operationName, message);
         } 
+        
         
         public ResourceOperationDialog(IResource resource, String operationName, String message) {
             super(operationName, operationName, message);

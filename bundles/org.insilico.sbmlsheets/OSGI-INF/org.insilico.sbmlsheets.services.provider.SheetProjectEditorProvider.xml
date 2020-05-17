@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.insilico.sbmlsheets.services.provider.SheetProjectEditorProvider">
+   <service>
+      <provide interface="org.eclipse.fx.code.editor.fx.e4.EditorClassURLProvider"/>
+   </service>
+   <implementation class="org.insilico.sbmlsheets.services.provider.SheetProjectEditorProvider"/>
+</scr:component>

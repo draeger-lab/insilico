@@ -1,6 +1,7 @@
 package org.insilico.ui.parts;
 
 import java.nio.file.Paths;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
@@ -23,6 +24,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.scene.layout.BorderPane;
 
+//@SuppressWarnings("restriction") //added by marietta 15032020
 public class NavigatorPart {
 
     @Inject
@@ -45,16 +47,24 @@ public class NavigatorPart {
         
         // Observe Selection
         viewer.getSelectedItems().addListener(new ListChangeListener<ResourceItem>() {
-            @Override
-            public void onChanged(Change<? extends ResourceItem> c) {
-                selectionService.setSelection(viewer.getSelectedItems().
-                        stream().
-                        // Map ResourceItem to IResource handle.
-                        map(item -> { return project.findMember(item.getUri().replaceAll("file:" + project.getLocation().toOSString() + "/", ""));}).
-                        filter(res -> { return res != null;}).
-                        collect(Collectors.toList()));
-                
-            }
+          @Override
+          public void onChanged(Change<? extends ResourceItem> c) {
+              String replaceStr = Pattern.quote("file:" + project.getLocation().toOSString() + "/");
+              selectionService.setSelection(viewer.getSelectedItems().
+                      stream().
+                      // Map ResourceItem to IResource handle.
+                      map(item -> { 
+                          return project.findMember(
+                                  item.getUri().replaceAll(
+                                          replaceStr, "")
+                                  );
+                          }
+                      ).filter(res -> { 
+                          return res != null;
+                          }
+                      ).collect(Collectors.toList()));
+              
+          }
         });
 
         // Register Context Menu

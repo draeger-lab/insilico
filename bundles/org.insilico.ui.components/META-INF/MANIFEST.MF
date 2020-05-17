@@ -5,6 +5,6 @@ Bundle-SymbolicName: org.insilico.ui.components
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: Draeger Lab
-Export-Package: org.insilico.ui.components,
- org.insilico.ui.components.dialogs,
- org.insilico.ui.components.list
+Export-Package: org.insilico.ui.components, 
+ org.insilico.ui.components.dialogs, org.insilico.ui.components.list
+Automatic-Module-Name: org.insilico.ui.components

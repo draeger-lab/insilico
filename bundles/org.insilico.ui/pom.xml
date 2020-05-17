@@ -23,50 +23,51 @@
 				</includes>
 			</resource>
 		</resources>
-
-		<plugins>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-source-plugin</artifactId>
-				<version>${tycho.version}</version>
-			</plugin>
-			<plugin>
-                <!-- used for generating SCR descriptors in the Maven Build, supports M2E Incremental builds as well -->
-                <groupId>biz.aQute.bnd</groupId>
-                <artifactId>bnd-maven-plugin</artifactId>
-                <version>3.3.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>bnd-process</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <!-- copy the OSGI-INF directory to a place where it is being detected and picked up by PDE Launcher as well, supported by M2E in incremental builds natively  -->
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.0.2</version>
-                <executions>
-                    <execution>
-                        <id>copy-resources</id>
-                        <!-- here the phase you need -->
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${basedir}/OSGI-INF/services</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>${project.build.outputDirectory}/OSGI-INF/services</directory>
-                                    <filtering>false</filtering>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-		</plugins>
+		<pluginManagement> <!-- added by marietta 15032020 -->
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-source-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
+				<plugin>
+	                <!-- used for generating SCR descriptors in the Maven Build, supports M2E Incremental builds as well -->
+	                <groupId>biz.aQute.bnd</groupId>
+	                <artifactId>bnd-maven-plugin</artifactId>
+	                <version>3.3.0</version>
+	                <executions>
+	                    <execution>
+	                        <goals>
+	                            <goal>bnd-process</goal>
+	                        </goals>
+	                    </execution>
+	                </executions>
+	            </plugin>
+	            <plugin>
+	                <!-- copy the OSGI-INF directory to a place where it is being detected and picked up by PDE Launcher as well, supported by M2E in incremental builds natively  -->
+	                <artifactId>maven-resources-plugin</artifactId>
+	                <version>3.0.2</version>
+	                <executions>
+	                    <execution>
+	                        <id>copy-resources</id>
+	                        <!-- here the phase you need -->
+	                        <phase>prepare-package</phase>
+	                        <goals>
+	                            <goal>copy-resources</goal>
+	                        </goals>
+	                        <configuration>
+	                            <outputDirectory>${basedir}/OSGI-INF/services</outputDirectory>
+	                            <resources>
+	                                <resource>
+	                                    <directory>${project.build.outputDirectory}/OSGI-INF/services</directory>
+	                                    <filtering>false</filtering>
+	                                </resource>
+	                            </resources>
+	                        </configuration>
+	                    </execution>
+	                </executions>
+	            </plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 </project>

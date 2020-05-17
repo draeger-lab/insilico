@@ -1,4 +1,4 @@
-package org.insilico.ui.services.provider;
+package org.insilico.ui.services.provider; 
 
 import org.eclipse.fx.core.app.ApplicationContext;
 import org.eclipse.fx.ui.services.startup.StartupProgressTrackerService;

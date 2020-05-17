@@ -16,6 +16,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+//@SuppressWarnings("restriction") // added by marietta 15032020
 public class ProjectListPart {
     public class ProjectCell extends SingleLineListCell<IProject> {
         public ProjectCell(GraphicStyle gStyle) {
@@ -41,6 +42,7 @@ public class ProjectListPart {
     @Inject
     MPart part;
 
+    
     @PostConstruct
     void init(BorderPane parent, Stage primaryStage) {
         ListView<IProject> list = new ListView<IProject>();

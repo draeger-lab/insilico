@@ -32,7 +32,7 @@
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_6I0aoGGwEeiFPq5DvKv2Yw" elementId="org.insilico.ui.sash.1" containerData="4000">
               <children xsi:type="basic:PartSashContainer" xmi:id="_3H5nUGGwEeiFPq5DvKv2Yw" elementId="org.insilico.ui.sash.2" containerData="3000" horizontal="true">
-                <children xsi:type="advanced:Placeholder" xmi:id="_snXdQGGvEeiFPq5DvKv2Yw" elementId="org.insilico.ui.area.editors" containerData="3000" ref="_GCzF4GGcEeiFLKNi0Omi7w"/>
+                <children xsi:type="advanced:Placeholder" xmi:id="_snXdQGGvEeiFPq5DvKv2Yw" elementId="org.insilico.ui.area.editors" containerData="3000" ref="_GCzF4GGcEeiFLKNi0Omi7w" closeable="true"/>
                 <children xsi:type="basic:PartStack" xmi:id="_EoznkGGxEeiFPq5DvKv2Yw" elementId="org.insilico.ui.partstack.0" containerData="1000">
                   <tags>org.eclipse.e4.secondaryNavigationStack</tags>
                   <tags>fx_scrollable</tags>
@@ -51,9 +51,14 @@
       <mainMenu xmi:id="_3nW7wElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.main">
         <persistedState key="fx.menubar.native" value="true"/>
         <children xsi:type="menu:Menu" xmi:id="_4rqRYElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.file" label="File">
-          <children xsi:type="menu:Menu" xmi:id="_X91dMGGeEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file.new" label="&amp;New"/>
+          <children xsi:type="menu:Menu" xmi:id="_X91dMGGeEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file.new" label="New...">
+            <children xsi:type="menu:HandledMenuItem" xmi:id="_MN9aAGgUEeqBI9km1PRmrQ" elementId="org.insilico.ui.handledmenuitem.createnew" label="Create New" command="_0gk-UHNMEei4d7vMJ5D9CA">
+              <parameters xmi:id="_fUfmAGgUEeqBI9km1PRmrQ" elementId="org.insilico.ui.parameter.0"/>
+            </children>
+          </children>
           <children xsi:type="menu:MenuSeparator" xmi:id="_3gXaYGGfEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file.seperator.0"/>
           <children xsi:type="menu:HandledMenuItem" xmi:id="_260dUGGfEeiFLKNi0Omi7w" elementId="org.insilico.ui.menu.file.move" label="Move..." tooltip="Moves the selected item." command="__4ZcUGGfEeiFLKNi0Omi7w"/>
+          <children xsi:type="menu:DirectMenuItem" xmi:id="_5kJfQG1CEeqU37Na_sapoA" elementId="org.insilico.ui.directmenuitem.exit" label="Exit" contributionURI="bundleclass://org.insilico.ui/org.insilico.ui.handlers.ExitWindowHandler"/>
         </children>
         <children xsi:type="menu:Menu" xmi:id="_5445gElMEeieS42OoRLPHw" elementId="org.insilico.ui.menu.edit" label="Edit"/>
         <children xsi:type="menu:Menu" xmi:id="_uQg0EE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.project" label="Project"/>
@@ -63,6 +68,9 @@
           </children>
         </children>
         <children xsi:type="menu:Menu" xmi:id="_reVAUE4hEeixccH-uztkrw" elementId="org.insilico.ui.menu.help" label="Help"/>
+        <children xsi:type="menu:Menu" xmi:id="_IF-5sHgHEeqJa7XRIYTdWA" elementId="org.insilico.ui.menu.plugins" label="Plugins">
+          <children xsi:type="menu:Menu" xmi:id="_tyZbsHgHEeqJa7XRIYTdWA" elementId="org.insilico.ui.menu.sbmlSheets" label="SBMLSheets"/>
+        </children>
       </mainMenu>
       <sharedElements xsi:type="advanced:Area" xmi:id="_GCzF4GGcEeiFLKNi0Omi7w" elementId="org.insilico.ui.area.editors" containerData="8000" selectedElement="_9cLX4E4fEeixccH-uztkrw" label="Editor Area">
         <children xsi:type="basic:PartStack" xmi:id="_9cLX4E4fEeixccH-uztkrw" elementId="org.insilico.ui.stack.editors" containerData="8000">

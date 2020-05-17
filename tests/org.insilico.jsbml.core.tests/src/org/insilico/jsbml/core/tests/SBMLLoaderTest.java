@@ -1,4 +1,4 @@
-package org.insilico.jsbml.core.tests;
+package org.insilico.jsbml.core.tests; 
 
 import static org.eclipse.fx.code.editor.Constants.DOCUMENT_URL;
 import static org.junit.Assert.assertNotNull;
@@ -21,7 +21,7 @@ import org.osgi.framework.ServiceReference;
 import org.sbml.jsbml.SBMLDocument;
 
 
-@SuppressWarnings("restriction")
+//@SuppressWarnings("restriction") commented out by marietta 16032020
 public class SBMLLoaderTest {
 
     private static final Bundle BUNDLE = FrameworkUtil.getBundle(SBMLLoaderTest.class);

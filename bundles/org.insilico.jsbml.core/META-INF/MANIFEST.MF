@@ -15,8 +15,13 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Service-Component: OSGI-INF/services/org.insilico.jsbml.core.services.provider.SBMLEditorProvider.xml,
  OSGI-INF/services/org.insilico.jsbml.core.services.provider.SBMLIconProvider.xml,
- OSGI-INF/services/org.insilico.jsbml.core.services.provider.SBMLDocumentLoader.xml
+ OSGI-INF/services/org.insilico.jsbml.core.services.provider.SBMLDocumentLoader.xml,
+ OSGI-INF/org.insilico.jsbml.core.services.provider.SBMLIconProvider.xml,
+ OSGI-INF/org.insilico.jsbml.core.services.provider.SBMLDocumentLoader.xml,
+ OSGI-INF/org.insilico.jsbml.core.services.provider.SBMLEditorProvider.xml
 Export-Package: org.insilico.jsbml.core,
  org.insilico.jsbml.core.editor,
  org.insilico.jsbml.core.services,
  org.insilico.jsbml.core.services.provider
+Automatic-Module-Name: org.insilico.jsbml.core
+Import-Package: org.osgi.service.component.annotations;version="1.2.0"

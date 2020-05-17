@@ -1,4 +1,4 @@
-package org.insilico.core;
+package org.insilico.core; 
 
 import org.eclipse.fx.ui.workbench.fx.E4MainThreadApplication;
 

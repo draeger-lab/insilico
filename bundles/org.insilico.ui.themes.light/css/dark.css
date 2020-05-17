@@ -17,7 +17,7 @@
 	-fx-text-background-color: -text-primary;
 	
 	/* Base colors of the theme. Used as background colors. */
-	-color-base-ligther: #555555;
+	-color-base-lighter: #555555;
 	-color-base: #434343;
 	-color-base-darker: #262626;
 	
@@ -239,7 +239,7 @@
 .radio-button:selected > .radio > .dot,
 .check-box:selected > .box > .mark,
 .check-box:indeterminate  > .box > .mark {
-    -fx-background-color: -fx-mark-color;
+    -fx-background-color: rgba(0, 0, 255, 1.0);/*-fx-mark-color;*/
 }
 
 /* ====   BOX LIKE THINGS   ================================================= */
@@ -275,6 +275,8 @@
 .split-pane:focused {
     -fx-background-color: inherit;
 }
+
+
 
 .split-pane > .split-pane-divider {  
     -fx-padding: 0 1px 0 1px;  
@@ -404,5 +406,22 @@
 
 .double-line-cell.no-graphic > .image-view {
 	
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Menus                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+ 
+.menu-up-arrow {
+    -fx-background-color: inherit;
+}
+.menu-down-arrow {
+    -fx-background-color: inherit;
+}
+.context-menu {
+    -fx-background-color: inherit;
 }
 

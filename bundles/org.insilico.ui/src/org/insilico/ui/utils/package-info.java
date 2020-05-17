@@ -4,4 +4,4 @@
  * @author roman
  * @see org.insilico.ui
  */
-package org.insilico.ui.utils;
+package org.insilico.ui.utils; 

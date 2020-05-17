@@ -1,0 +1,6 @@
+@charset "UTF-8";
+.text-field:error{
+	-fx-text-border: red;
+	-fx-focus-border: red;
+	-fx-text-fill: black;
+}

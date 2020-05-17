@@ -31,7 +31,7 @@ import org.sbml.jsbml.SBMLDocument;
  * @author roman
  *
  */
-@SuppressWarnings("restriction")
+//@SuppressWarnings("restriction") commented out by marietta 16032020
 @Component(service = IContextFunction.class,
         property = {"service.context.key=org.sbml.jsbml.SBMLDocument"})
 public class SBMLDocumentLoader extends ContextFunction {
@@ -40,7 +40,8 @@ public class SBMLDocumentLoader extends ContextFunction {
 
     @Override
     public Object compute(IEclipseContext context, String contextKey) {
-        System.out.println("Compute...");
+      return IInjector.NOT_A_VALUE;
+        /*System.out.println("Compute...");
         Object urlVal = context.get(DOCUMENT_URL);
 
         if (urlVal == null) {
@@ -69,7 +70,12 @@ public class SBMLDocumentLoader extends ContextFunction {
                 // Load if needed
                 try {
                     URI url = URIUtil.fromString(urlString);
-                    doc = JSBML.readSBMLFromFile(url.getPath());
+                    if (url!=null) {
+                      if (url.getPath()!=null) {
+                        doc = JSBML.readSBMLFromFile(url.getPath());
+                      }
+                    }
+                    
                     // doc = SBMLReader.read(new File(url));
                     cache.put(urlString, doc);
                 }
@@ -85,6 +91,6 @@ public class SBMLDocumentLoader extends ContextFunction {
         }
 
         System.out.println("No doc selected");
-        return IInjector.NOT_A_VALUE;
+        return IInjector.NOT_A_VALUE;*/
     }
 }

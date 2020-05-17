@@ -1,15 +1,12 @@
-package org.insilico.jsbml.core.editor;
+package org.insilico.jsbml.core.editor; 
 
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
-
 import org.sbml.jsbml.SBMLDocument;
 import org.sbml.jsbml.SBase;
-
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.BorderPane;
@@ -21,9 +18,11 @@ public class DocumentTreeView {
 
     @PostConstruct
     private void init(BorderPane parent) {
+      if (doc!=null) {
         TreeView<SBase> docTreeView = new TreeView<>(convertToTreeItem(doc, 2));
 
         parent.setCenter(docTreeView);
+      }
     }
 
     private TreeItem<SBase> convertToTreeItem(SBase elem, int expandLevels) {

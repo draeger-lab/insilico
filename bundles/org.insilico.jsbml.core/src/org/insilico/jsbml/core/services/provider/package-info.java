@@ -4,4 +4,4 @@
  * @author roman
  * @see org.insilico.jsbml.core
  */
-package org.insilico.jsbml.core.services.provider;
+package org.insilico.jsbml.core.services.provider; 
